@@ -1,12 +1,46 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import HomeChurchSection from '@/components/HomeChurchSection'
 import ApprovedHomeGroups from '@/components/ApprovedHomeGroups'
+import ArtistsAsLeadersSection from '@/components/ArtistsAsLeadersSection'
 
 export default function Home() {
   return (
     <div>
+      {/* First Time? */}
+      <section className="bg-[#f7f7f5] py-8 px-4 border-b border-[#e2e8f0]" aria-labelledby="first-time-heading">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 id="first-time-heading" className="text-xl md:text-2xl font-bold text-[#1a1a1a] mb-4">
+            First time here?
+          </h2>
+          <p className="text-[#4a5568] max-w-2xl mx-auto mb-6">
+            Come expectant. God is moving through the power of music—awakening hearts, transforming lives, and drawing us into His presence. Find a home group near you and come regularly. Union and communion in the body of Christ grows when we gather often. The Spirit is at work.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/locations"
+              className="inline-block bg-[#1b5e3f] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#144d32] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1b5e3f] focus-visible:ring-offset-2"
+            >
+              Find a Home Group Near You
+            </Link>
+            <Link
+              href="/experience/online"
+              className="inline-block bg-[#ffffff] text-[#1a1a1a] border-2 border-[#1b5e3f] font-semibold py-3 px-6 rounded-lg hover:bg-[#f7f7f5] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1b5e3f] focus-visible:ring-offset-2"
+            >
+              Church Online
+            </Link>
+            <Link
+              href="/next-steps"
+              className="inline-block bg-[#ffffff] text-[#1a1a1a] border-2 border-[#1b5e3f] font-semibold py-3 px-6 rounded-lg hover:bg-[#f7f7f5] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1b5e3f] focus-visible:ring-offset-2"
+            >
+              Next Steps
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Hero */}
       <section className="bg-[#1b5e3f] text-[#ffffff] py-16 md:py-24 px-4" aria-labelledby="hero-heading">
         <div className="container mx-auto max-w-4xl text-center">
@@ -14,13 +48,31 @@ export default function Home() {
             The United States Church of Music
           </h1>
           <p className="text-xl md:text-2xl opacity-95 max-w-2xl mx-auto mb-8">
-            Spiritual revival through home churches across the country. We believe God works through the power of music.
+            Spiritual revival through home churches across the country. God is moving through music—and we believe the Holy Spirit empowers artists as spiritual leaders in our community to lead us into encounter with Him.
           </p>
           <Link
             href="/next-steps#home-groups"
             className="inline-block bg-[#ffffff] text-[#1b5e3f] font-bold py-4 px-8 rounded-lg hover:bg-[#f7f7f5] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffffff] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1b5e3f]"
           >
             Host a Church of Music Home Group
+          </Link>
+        </div>
+      </section>
+
+      {/* Church Online / Watch */}
+      <section className="py-12 px-4 bg-[#ffffff]" aria-labelledby="watch-heading">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 id="watch-heading" className="text-2xl md:text-3xl font-bold text-[#1a1a1a] mb-4">
+            Watch
+          </h2>
+          <p className="text-[#4a5568] max-w-2xl mx-auto mb-6">
+            Join our worship ceremonies online. Church Online brings the same 90% music, 10% talk format to your screen—spiritual leaders and artists—whom we acknowledge as spiritual leaders—leading worship through the power of music. Come expectant for what the Spirit will do.
+          </p>
+          <Link
+            href="/experience/online"
+            className="inline-block bg-[#1b5e3f] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[#144d32] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1b5e3f] focus-visible:ring-offset-2"
+          >
+            Church Online
           </Link>
         </div>
       </section>
@@ -32,10 +84,10 @@ export default function Home() {
       <section className="bg-[#b8860b] text-[#1a1a1a] py-6 px-4" aria-labelledby="cta-heading">
         <div className="container mx-auto text-center">
           <h2 id="cta-heading" className="text-2xl md:text-3xl font-bold mb-2">
-            Host a Church of Music Home Group
+            Union & Communion at Home Groups
           </h2>
           <p className="text-lg opacity-95 max-w-2xl mx-auto">
-            Home churches can register on this site as home groups. Present music to church members and host worship ceremonies that are 90% music and 10% talk.
+            The body of Christ gathers in homes for worship. Come often. Regular attendance deepens community and draws others in. Host or attend—both build the church.
           </p>
           <Link
             href="/next-steps#home-groups"
@@ -46,23 +98,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Artists as Spiritual Leaders */}
+      <ArtistsAsLeadersSection />
+
       {/* What We Do */}
       <section className="py-16 md:py-24 px-4 bg-[#f7f7f5]" aria-labelledby="what-heading">
         <div className="container mx-auto max-w-4xl">
           <h2 id="what-heading" className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-8 text-center">
             Worship Through Music
           </h2>
+          {/* Home group visual: acoustic artist in home with gathered worshipers */}
+          <div className="relative rounded-xl overflow-hidden mb-12 aspect-[16/9] max-w-3xl mx-auto border-2 border-[#e2e8f0]">
+            <Image
+              src="/images/home-groups/home-group-stage-audience.jpg"
+              alt="Acoustic artist on home stage with people gathered in worship at Church of Music"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 768px"
+            />
+          </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-[#ffffff] rounded-xl p-8 border border-[#e2e8f0]">
-              <h3 className="text-xl font-bold text-[#1a1a1a] mb-4">Home Groups</h3>
+              <h3 className="text-xl font-bold text-[#1a1a1a] mb-4">Home Groups: Union & Communion</h3>
               <p className="text-[#4a5568] leading-relaxed">
-                Worship leaders and spiritual leaders from established churches introduce artists at our home groups. Church members attend, bring their own drink, and participate in worship ceremonies that are 90% music and 10% pecha kucha–style sermons about how God works through music.
+                The body of Christ gathers in homes for regular union and communion. Worship leaders and spiritual leaders introduce artists as spiritual leaders. Church members attend often—bringing their own drink, sharing the table—and participate in worship that is 90% music and 10% reflection. Come consistently. Your presence strengthens the body and invites others in.
               </p>
             </div>
             <div className="bg-[#ffffff] rounded-xl p-8 border border-[#e2e8f0]">
-              <h3 className="text-xl font-bold text-[#1a1a1a] mb-4">Local & Touring Artists</h3>
+              <h3 className="text-xl font-bold text-[#1a1a1a] mb-4">Local & Touring Artists as Spiritual Leaders</h3>
               <p className="text-[#4a5568] leading-relaxed">
-                We host local and touring artists in our worship ceremonies. We are partnered with Folk Alliance International. Artists are recognized as spiritual leaders in our community, and we invite them to present their spiritual journeys during our home groups.
+                We host local and touring artists in our worship ceremonies—partnered with Folk Alliance International. We acknowledge artists as spiritual leaders in our community: they present their spiritual journeys, lead worship through music, and the Holy Spirit moves through their giftings to bring healing, awakening, and encounter with God. Come meet them.
               </p>
             </div>
           </div>
@@ -73,10 +138,10 @@ export default function Home() {
       <section className="py-12 px-4 bg-[#1a1a1a] text-[#ffffff]" aria-labelledby="host-heading">
         <div className="container mx-auto text-center">
           <h2 id="host-heading" className="text-2xl md:text-3xl font-bold mb-4">
-            Host a Church of Music Home Group
+            Gather Often. Build the Body.
           </h2>
           <p className="text-lg opacity-90 max-w-2xl mx-auto mb-6">
-            Register your home church as a home group. Workshop alongside artists and church members in worship that centers the power of music.
+            Regular union and communion at home groups deepens the church. Host or attend—each gathering draws more people into worship. Register your home or find one near you.
           </p>
           <Link
             href="/next-steps#home-groups"
@@ -90,6 +155,32 @@ export default function Home() {
       {/* Home Church section */}
       <HomeChurchSection />
 
+      {/* Still Have Questions? */}
+      <section className="py-12 px-4 bg-[#f7f7f5]" aria-labelledby="questions-heading">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 id="questions-heading" className="text-2xl font-bold text-[#1a1a1a] mb-4">
+            Still Have Questions?
+          </h2>
+          <p className="text-[#4a5568] mb-6">
+            We believe clarity is kindness. Visit our FAQ or reach out.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/faq"
+              className="inline-block text-[#1b5e3f] font-semibold underline underline-offset-4 hover:text-[#144d32] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1b5e3f] focus-visible:ring-offset-2 rounded"
+            >
+              FAQ
+            </Link>
+            <Link
+              href="/report-issue"
+              className="inline-block text-[#1b5e3f] font-semibold underline underline-offset-4 hover:text-[#144d32] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1b5e3f] focus-visible:ring-offset-2 rounded"
+            >
+              Get In Touch
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Beliefs preview */}
       <section className="py-16 px-4" aria-labelledby="beliefs-heading">
         <div className="container mx-auto max-w-4xl">
@@ -97,7 +188,7 @@ export default function Home() {
             Our Beliefs
           </h2>
           <p className="text-[#4a5568] text-lg text-center max-w-2xl mx-auto mb-8">
-            We believe the Holy Spirit works through music, inspiring faith and empowering righteousness. Our beliefs are rooted in Biblical scripture about music as worship and connection with God.
+            The Holy Spirit moves through music—inspiring faith, empowering righteousness, and drawing us into the presence of God. We believe in miracles through music, in artists as spiritual leaders, and in revival. Our beliefs are rooted in Biblical scripture.
           </p>
           <div className="text-center">
             <Link

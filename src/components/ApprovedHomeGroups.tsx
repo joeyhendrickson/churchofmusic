@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { supabase } from '@/lib/supabaseClient'
 
 interface HomeGroupEvent {
@@ -9,7 +10,7 @@ interface HomeGroupEvent {
   event_date: string
   start_time: string
   end_time: string
-  artists: { name: string } | null
+  artists: { id: string; name: string } | null
   home_church_leaders: { neighborhood: string; city: string } | null
 }
 
@@ -40,7 +41,7 @@ export default function ApprovedHomeGroups() {
             event_date,
             start_time,
             end_time,
-            artists(name),
+            artists(id, name),
             home_church_leaders(neighborhood, city)
           `)
           .eq('status', 'approved')
@@ -63,16 +64,21 @@ export default function ApprovedHomeGroups() {
   return (
     <section className="py-16 px-4 bg-[#ffffff] border-t border-[#e2e8f0]" aria-labelledby="upcoming-home-groups-heading">
       <div className="container mx-auto max-w-4xl">
-        <h2 id="upcoming-home-groups-heading" className="text-3xl font-bold text-[#1a1a1a] mb-8 text-center">
+        <h2 id="upcoming-home-groups-heading" className="text-3xl font-bold text-[#1a1a1a] mb-4 text-center">
           Upcoming Home Groups
         </h2>
+        <p className="text-[#4a5568] text-center max-w-2xl mx-auto mb-8">
+          Join us. Regular union and communion in the body of the church happens at home groups. Your attendance builds community and invites others into worship. Find a gathering near you.
+        </p>
         <div className="grid gap-6 md:grid-cols-2">
           {events.map((ev) => {
-            const artistName = ev.artists && typeof ev.artists === 'object' && 'name' in ev.artists
-              ? (ev.artists as { name: string }).name
-              : 'Artist'
+            const artist = ev.artists && typeof ev.artists === 'object'
+              ? (ev.artists as { id: string; name: string })
+              : null
+            const artistName = artist?.name ?? 'Artist'
+            const artistId = artist?.id
             const loc = ev.home_church_leaders
-              ? `${(ev.home_church_leaders as any).neighborhood || ''}, ${(ev.home_church_leaders as any).city || ''}`.trim()
+              ? `${(ev.home_church_leaders as { neighborhood?: string; city?: string }).neighborhood || ''}, ${(ev.home_church_leaders as { neighborhood?: string; city?: string }).city || ''}`.trim()
               : ''
             return (
               <article
@@ -80,7 +86,17 @@ export default function ApprovedHomeGroups() {
                 className="bg-[#f7f7f5] rounded-xl p-6 border-2 border-[#e2e8f0]"
               >
                 <h3 className="text-xl font-bold text-[#1a1a1a] mb-2">{ev.title}</h3>
-                <p className="text-[#1b5e3f] font-semibold mb-2">{artistName}</p>
+                <div className="mb-2">
+                  <span className="text-[#1b5e3f] font-semibold">{artistName}</span>
+                  {artistId && (
+                    <Link
+                      href={`/artist/${artistId}`}
+                      className="ml-2 text-sm text-[#1b5e3f] hover:underline"
+                    >
+                      Stream their music →
+                    </Link>
+                  )}
+                </div>
                 {loc && <p className="text-[#4a5568] text-sm mb-2">{loc}</p>}
                 <p className="text-[#4a5568] text-sm mb-2">
                   {new Date(ev.event_date).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })} • {formatTime(ev.start_time)} – {formatTime(ev.end_time)}

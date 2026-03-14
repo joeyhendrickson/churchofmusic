@@ -4,6 +4,7 @@ import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import { ChatbotProvider } from "@/context/ChatbotContext";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -28,6 +29,7 @@ export default function RootLayout({
           <ChatbotProvider>
             <Navbar />
             <main id="main-content">{children}</main>
+            <Footer />
             <Chatbot />
           </ChatbotProvider>
         </CartProvider>

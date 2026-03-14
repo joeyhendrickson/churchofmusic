@@ -10,6 +10,10 @@ const navItems = [
     subnav: [
       { label: 'Our Tenets', href: '/about#tenets' },
       { label: 'Artists as Leaders', href: '/about#artists' },
+      { label: 'Biblical Perspectives', href: '/biblical-perspectives' },
+      { label: 'Leadership', href: '/leadership' },
+      { label: 'FAQ', href: '/faq' },
+      { label: 'Legal', href: '/legal' },
     ],
   },
   {
@@ -25,11 +29,11 @@ const navItems = [
     label: 'Locations',
     href: '/locations',
     subnav: [
-      { label: 'Westerville', href: '/locations#westerville' },
-      { label: 'Grove City', href: '/locations#grove-city' },
-      { label: 'Downtown Columbus', href: '/locations#downtown-columbus' },
-      { label: 'Dublin', href: '/locations#dublin' },
-      { label: 'New Albany', href: '/locations#new-albany' },
+      { label: 'Westerville', href: '/locations/westerville' },
+      { label: 'Grove City', href: '/locations/grove-city' },
+      { label: 'Downtown Columbus', href: '/locations/downtown-columbus' },
+      { label: 'Dublin', href: '/locations/dublin' },
+      { label: 'New Albany', href: '/locations/new-albany' },
     ],
   },
   {
@@ -48,7 +52,9 @@ const navItems = [
     label: 'Give',
     href: '/give',
     subnav: [
+      { label: 'What Is Tithing?', href: '/give#tithing' },
       { label: 'Ways To Give', href: '/give#ways' },
+      { label: 'Our Impact', href: '/give#impact' },
     ],
   },
 ]

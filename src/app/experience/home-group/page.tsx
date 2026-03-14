@@ -1,15 +1,31 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function HomeGroupPage() {
   return (
     <div className="min-h-screen py-16 px-4">
       <div className="container mx-auto max-w-3xl">
-        <h1 className="text-4xl font-bold text-[#1a1a1a] mb-8">Home Group Workshop</h1>
+        <h1 className="text-4xl font-bold text-[#1a1a1a] mb-4">Home Group Workshop</h1>
+        <p className="text-lg text-[#4a5568] leading-relaxed mb-8">
+          Union and communion in the body of Christ happens when we gather regularly. Home groups are the heart of the Church of Music—where acoustic artists lead worship in living rooms and home stages, and people come together for fellowship, shared table, and worship. Attend often. Your presence builds the church and invites others in.
+        </p>
+
+        <div className="relative rounded-xl overflow-hidden mb-12 aspect-video border-2 border-[#e2e8f0]">
+          <Image
+            src="/images/home-groups/home-group-communion-gathering.jpg"
+            alt="Folk musician performing in a home gathering with people in communion and fellowship"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+            priority
+          />
+        </div>
+
         <p className="text-lg text-[#4a5568] leading-relaxed mb-6">
-          Home groups are the heart of the Church of Music. Church members attend, bring their own drink, and workshop alongside artists in worship ceremonies that are 90% music and 10% pecha kucha–style sermons from spiritual leaders who speak to how God works through the modality of music.
+          Church members bring their own drink and food—passover style, unifying with the body. Workshop alongside artists as spiritual leaders in ceremonies that are 90% music and 10% pecha kucha–style reflection on how God moves through music. Worship leaders from established churches introduce artists. We host local and touring artists and are partnered with Folk Alliance International.
         </p>
         <p className="text-lg text-[#4a5568] leading-relaxed mb-8">
-          Worship leaders and spiritual leaders from established churches introduce artists at each home group. We host local and touring artists and are partnered with Folk Alliance International.
+          Come consistently. Regular attendance deepens community, strengthens the body, and draws more people into worship. The more we gather, the more we grow.
         </p>
         <Link
           href="/next-steps#home-groups"

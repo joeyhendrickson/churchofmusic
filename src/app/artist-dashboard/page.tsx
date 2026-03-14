@@ -70,6 +70,13 @@ export default function ArtistDashboard() {
   const [activeTab, setActiveTab] = useState('overview')
   const [playingComment, setPlayingComment] = useState<string | null>(null)
   const [processingPayouts, setProcessingPayouts] = useState(false)
+
+  // Spiritual Perspective state
+  const [perspectives, setPerspectives] = useState<{ id: string; status: string; title: string }[]>([])
+  const [perspectivePrompt, setPerspectivePrompt] = useState('')
+  const [perspectiveGenerated, setPerspectiveGenerated] = useState<{ title: string; excerpt: string; body: string } | null>(null)
+  const [perspectiveGenerating, setPerspectiveGenerating] = useState(false)
+  const [perspectiveSubmitting, setPerspectiveSubmitting] = useState(false)
   
   // Upload modal state
   const [showUploadModal, setShowUploadModal] = useState(false)
@@ -124,7 +131,8 @@ export default function ArtistDashboard() {
         fetchSongs(artistData.id),
         fetchVoiceComments(artistData.id),
         fetchPurchases(artistData.id),
-        fetchRevenue(artistData.id)
+        fetchRevenue(artistData.id),
+        fetchPerspectives(artistData.id)
       ])
 
     } catch (error) {
@@ -213,6 +221,90 @@ export default function ArtistDashboard() {
 
     if (!error && data) {
       setSongs(data)
+    }
+  }
+
+  const fetchPerspectives = async (artistId: string) => {
+    const { data } = await supabase
+      .from('artist_perspectives')
+      .select('id, status, title')
+      .eq('artist_id', artistId)
+      .order('created_at', { ascending: false })
+    setPerspectives(data || [])
+  }
+
+  const handleGeneratePerspective = async () => {
+    if (!artist || !perspectivePrompt.trim()) return
+    setPerspectiveGenerating(true)
+    setPerspectiveGenerated(null)
+    try {
+      const { data: { session } } = await supabase.auth.getSession()
+      if (!session) {
+        alert('Please log in again.')
+        return
+      }
+      const res = await fetch('/api/artist/generate-perspective', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${session.access_token}`,
+        },
+        body: JSON.stringify({ prompt: perspectivePrompt.trim() }),
+      })
+      const json = await res.json()
+      if (res.ok && json.success) {
+        setPerspectiveGenerated({
+          title: json.title,
+          excerpt: json.excerpt,
+          body: json.body,
+        })
+      } else {
+        alert(json.error || 'Failed to generate article')
+      }
+    } catch (e) {
+      console.error(e)
+      alert('Failed to generate article')
+    } finally {
+      setPerspectiveGenerating(false)
+    }
+  }
+
+  const handleSubmitPerspective = async () => {
+    if (!artist || !perspectiveGenerated) return
+    setPerspectiveSubmitting(true)
+    try {
+      const { data: { session } } = await supabase.auth.getSession()
+      if (!session) {
+        alert('Please log in again.')
+        return
+      }
+      const res = await fetch('/api/artist/submit-perspective', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${session.access_token}`,
+        },
+        body: JSON.stringify({
+          prompt: perspectivePrompt,
+          title: perspectiveGenerated.title,
+          excerpt: perspectiveGenerated.excerpt,
+          articleBody: perspectiveGenerated.body,
+        }),
+      })
+      const json = await res.json()
+      if (res.ok && json.success) {
+        alert('Perspective submitted for admin review. You will be notified when it is approved.')
+        setPerspectivePrompt('')
+        setPerspectiveGenerated(null)
+        fetchPerspectives(artist.id)
+      } else {
+        alert(json.error || 'Failed to submit')
+      }
+    } catch (e) {
+      console.error(e)
+      alert('Failed to submit')
+    } finally {
+      setPerspectiveSubmitting(false)
     }
   }
 
@@ -656,6 +748,14 @@ export default function ArtistDashboard() {
           >
             Payouts & Earnings
           </button>
+          <button
+            onClick={() => setActiveTab('perspective')}
+            className={`px-4 py-2 rounded-lg transition-colors ${
+              activeTab === 'perspective' ? 'bg-black text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            Spiritual Perspective
+          </button>
         </div>
 
         <div className="space-y-6">
@@ -1069,6 +1169,85 @@ export default function ArtistDashboard() {
                   </div>
                 </div>
               </div>
+            </div>
+          )}
+
+          {/* Spiritual Perspective Tab */}
+          {activeTab === 'perspective' && (
+            <div className="space-y-6">
+              <h2 className="text-2xl font-bold text-gray-900">Spiritual Perspective</h2>
+              <p className="text-gray-600 max-w-2xl">
+                Share your perspective on how God works through music. Write a prompt describing your personal experiences—stories of healing, encounter, or transformation through music. Our AI will generate a full article. Submit it for admin review; when approved, it will appear on the Perspectives page with &quot;Written By [Your Name]&quot;.
+              </p>
+
+              <div className="bg-white border border-gray-200 p-6 rounded-2xl shadow-lg max-w-2xl">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Your prompt
+                </label>
+                <p className="text-xs text-gray-500 mb-2">
+                  Share your personal stories: How has God worked through music in your life? Moments of healing, awakening, or connection? Experiences with different genres? Be specific—your stories will shape the article.
+                </p>
+                <textarea
+                  value={perspectivePrompt}
+                  onChange={(e) => setPerspectivePrompt(e.target.value)}
+                  rows={6}
+                  placeholder="Example: I grew up in a household where gospel and blues intertwined. There was a season when I fell into deep depression, and a certain folk song—not explicitly Christian—became the first crack of light. It spoke of loss and hope in a way that opened my heart to pray again. I believe God uses all kinds of music to draw people closer..."
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1b5e3f] focus:border-[#1b5e3f] text-gray-900 placeholder-gray-500"
+                />
+                <button
+                  type="button"
+                  onClick={handleGeneratePerspective}
+                  disabled={perspectiveGenerating || !perspectivePrompt.trim()}
+                  className="mt-4 bg-[#1b5e3f] hover:bg-[#144d32] disabled:bg-gray-400 text-white px-6 py-2 rounded-lg transition-colors"
+                >
+                  {perspectiveGenerating ? 'Generating...' : 'Generate Article'}
+                </button>
+              </div>
+
+              {perspectiveGenerated && (
+                <div className="bg-white border border-gray-200 p-6 rounded-2xl shadow-lg max-w-2xl">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Preview</h3>
+                  <p className="text-sm text-gray-600 font-medium mb-1">Title</p>
+                  <p className="text-gray-900 mb-4">{perspectiveGenerated.title}</p>
+                  <p className="text-sm text-gray-600 font-medium mb-1">Excerpt</p>
+                  <p className="text-gray-700 mb-4">{perspectiveGenerated.excerpt}</p>
+                  <p className="text-sm text-gray-600 font-medium mb-1">Body (first 300 chars)</p>
+                  <p className="text-gray-700 text-sm mb-4 line-clamp-4">{perspectiveGenerated.body}</p>
+                  <div className="flex gap-3">
+                    <button
+                      type="button"
+                      onClick={handleSubmitPerspective}
+                      disabled={perspectiveSubmitting}
+                      className="bg-black hover:bg-gray-800 disabled:bg-gray-400 text-white px-6 py-2 rounded-lg transition-colors"
+                    >
+                      {perspectiveSubmitting ? 'Submitting...' : 'Submit for Admin Review'}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setPerspectiveGenerated(null)}
+                      className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-2 rounded-lg transition-colors"
+                    >
+                      Discard & Regenerate
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {perspectives.length > 0 && (
+                <div className="bg-gray-50 border border-gray-200 p-6 rounded-2xl max-w-2xl">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Your Submissions</h3>
+                  <ul className="space-y-2">
+                    {perspectives.map((p) => (
+                      <li key={p.id} className="flex justify-between items-center py-2 border-b border-gray-200 last:border-0">
+                        <span className="text-gray-900 font-medium">{p.title || 'Untitled'}</span>
+                        <span className={`text-sm px-2 py-1 rounded ${p.status === 'approved' ? 'bg-green-100 text-green-800' : p.status === 'rejected' ? 'bg-red-100 text-red-800' : 'bg-yellow-100 text-yellow-800'}`}>
+                          {p.status}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           )}
         </div>

@@ -119,6 +119,7 @@ export default function AdminDashboard() {
 
   const [pendingHomeChurchLeaders, setPendingHomeChurchLeaders] = useState<any[]>([])
   const [pendingHomeGroupEvents, setPendingHomeGroupEvents] = useState<any[]>([])
+  const [pendingPerspectives, setPendingPerspectives] = useState<{ id: string; title: string; excerpt: string; artist_name: string }[]>([])
 
   useEffect(() => {
     checkAuth()
@@ -318,6 +319,20 @@ export default function AdminDashboard() {
         artist_name: song.artists?.name || 'Unknown Artist'
       })))
     }
+
+    // Fetch pending artist perspectives
+    const { data: perspectivesData } = await supabase
+      .from('artist_perspectives')
+      .select('id, title, excerpt, artists(name)')
+      .eq('status', 'pending')
+    if (perspectivesData) {
+      setPendingPerspectives(perspectivesData.map((p: any) => ({
+        id: p.id,
+        title: p.title || 'Untitled',
+        excerpt: p.excerpt || '',
+        artist_name: p.artists?.name || 'Unknown Artist'
+      })))
+    }
   }
 
   const fetchApprovalHistory = async () => {
@@ -423,6 +438,36 @@ export default function AdminDashboard() {
     } else {
       const d = await res.json()
       alert(d.message || 'Error')
+    }
+  }
+
+  const approvePerspective = async (perspectiveId: string) => {
+    const res = await fetch('/api/admin/approve-perspective', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ perspectiveId, action: 'approve' }),
+    })
+    if (res.ok) {
+      await fetchPendingApprovals()
+      alert('Perspective approved!')
+    } else {
+      const d = await res.json()
+      alert(d.error || 'Error')
+    }
+  }
+
+  const rejectPerspective = async (perspectiveId: string) => {
+    const res = await fetch('/api/admin/approve-perspective', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ perspectiveId, action: 'reject' }),
+    })
+    if (res.ok) {
+      await fetchPendingApprovals()
+      alert('Perspective rejected.')
+    } else {
+      const d = await res.json()
+      alert(d.error || 'Error')
     }
   }
 
@@ -1042,6 +1087,45 @@ export default function AdminDashboard() {
                           </button>
                           <button
                             onClick={() => rejectSong(song.id)}
+                            className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 text-sm"
+                          >
+                            Reject
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Pending Spiritual Perspectives */}
+            <div className="bg-white rounded-lg shadow">
+              <div className="px-6 py-4 border-b border-gray-200">
+                <h3 className="text-lg font-medium text-gray-900">Pending Spiritual Perspectives</h3>
+                <p className="text-sm text-gray-500 mt-1">Artist-submitted articles for the Perspectives page</p>
+              </div>
+              <div className="p-6">
+                {pendingPerspectives.length === 0 ? (
+                  <p className="text-gray-500">No pending perspective approvals</p>
+                ) : (
+                  <div className="space-y-4">
+                    {pendingPerspectives.map((p) => (
+                      <div key={p.id} className="flex items-start justify-between p-4 border border-gray-200 rounded-lg">
+                        <div className="flex-1">
+                          <h4 className="font-medium text-gray-900">{p.title}</h4>
+                          <p className="text-sm text-gray-500">by {p.artist_name}</p>
+                          {p.excerpt && <p className="text-sm text-gray-600 mt-2 line-clamp-2">{p.excerpt}</p>}
+                        </div>
+                        <div className="flex space-x-2 ml-4">
+                          <button
+                            onClick={() => approvePerspective(p.id)}
+                            className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 text-sm"
+                          >
+                            Approve
+                          </button>
+                          <button
+                            onClick={() => rejectPerspective(p.id)}
                             className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 text-sm"
                           >
                             Reject

@@ -2,12 +2,12 @@ import Link from 'next/link'
 
 export default function NextStepsPage() {
   const steps = [
-    { id: 'get-started', title: 'Get Started', desc: 'Begin your journey with the Church of Music. Attend a home group, explore our beliefs, or reach out to connect.' },
+    { id: 'get-started', title: 'Get Started', desc: 'Begin your journey with the Church of Music. Attend a home group, explore our beliefs, or reach out to connect. Come expectant for what the Spirit will do.' },
     { id: 'follow', title: 'Follow', desc: 'Follow us on social media and subscribe to our updates to stay connected with worship series, events, and home group schedules.' },
-    { id: 'connect', title: 'Connect', desc: 'Connect with worship leaders, artists, and other church members. Build community through music and worship.' },
-    { id: 'serve', title: 'Serve', desc: 'Serve the church by volunteering at home groups, supporting artists, or helping with worship ceremonies.' },
-    { id: 'give', title: 'Give', desc: 'Support the church through tithes and donations. Membership donations sustain our home groups and support artists.' },
-    { id: 'home-groups', title: 'Home Groups', desc: 'Host a Church of Music Home Group. Register your home church as a home group and present music to church members. Worship ceremonies are 90% music and 10% talk. Reach out to learn how to register.' },
+    { id: 'connect', title: 'Connect', desc: 'Connect with worship leaders, artists as spiritual leaders, and other church members. Build community through music and worship.' },
+    { id: 'serve', title: 'Serve', desc: 'Serve the church by volunteering at home groups, supporting artists as spiritual leaders, or helping with worship ceremonies.' },
+    { id: 'give', title: 'Give', desc: 'Support the church through tithes and donations. Membership donations sustain our home groups and support artists as spiritual leaders in their calling.' },
+    { id: 'home-groups', title: 'Home Groups', desc: 'Union and communion in the body of Christ happens at home groups. Attend regularly—your presence builds community and draws others in. Host or join: acoustic artists lead worship in homes; people gather for fellowship and worship. Come often.' },
   ]
 
   return (
@@ -18,7 +18,7 @@ export default function NextStepsPage() {
             Next Steps
           </h1>
           <p className="text-lg text-[#4a5568] leading-relaxed mb-12">
-            Take the next step in your journey with the Church of Music. Whether you want to get started, connect, serve, or host a home group, we are here to support you.
+            Take the next step in your journey with the Church of Music. Whether you want to get started, connect, serve, or host a home group—we are here. Come expectant for transformation, encounter, and what God will do through music.
           </p>
 
           <div className="space-y-8">
@@ -39,9 +39,9 @@ export default function NextStepsPage() {
           </div>
 
           <div className="mt-12 p-8 bg-[#1b5e3f] text-[#ffffff] rounded-xl">
-            <h2 className="text-2xl font-bold mb-4">Host a Church of Music Home Group</h2>
+            <h2 className="text-2xl font-bold mb-4">Union, Communion & Regular Attendance</h2>
             <p className="mb-6 opacity-95">
-              Home churches can register on this site as home groups. Present music to church members and host worship ceremonies that center the power of music. Contact us to get started.
+              The body of Christ gathers in homes for worship. Register your home church as a home group—or attend one near you. Regular union and communion builds the church and draws more people into worship. Come often. Contact us to get started.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link

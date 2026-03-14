@@ -69,7 +69,7 @@ export default function ReportIssue() {
           </p>
           <Link
             href="/"
-            className="inline-block bg-[#E55A2B] text-white font-semibold py-3 px-6 rounded-full hover:bg-[#D14A1B] transition-colors"
+            className="inline-block bg-[#1b5e3f] text-white font-semibold py-3 px-6 rounded-full hover:bg-[#144d32] transition-colors"
           >
             Return to Home
           </Link>
@@ -83,7 +83,7 @@ export default function ReportIssue() {
       {/* Header */}
       <div className="bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 py-6">
-          <Link href="/" className="text-[#E55A2B] hover:text-[#D14A1B] transition-colors">
+          <Link href="/" className="text-[#1b5e3f] hover:text-[#144d32] transition-colors">
             ← Back to Home
           </Link>
         </div>
@@ -94,9 +94,9 @@ export default function ReportIssue() {
         <div className="max-w-2xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Report an Issue</h1>
-            <p className="text-gray-600 text-lg">
-              Help us improve Launch That Song by reporting any issues you encounter.
+            <h1 className="text-4xl font-bold text-[#1a1a1a] mb-4">Contact Us</h1>
+            <p className="text-[#4a5568] text-lg">
+              Report an issue, ask a question, or get in touch with the Church of Music.
             </p>
           </div>
 
@@ -114,7 +114,7 @@ export default function ReportIssue() {
                   value={formData.issueName}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E55A2B] focus:border-[#E55A2B] text-gray-900 placeholder-gray-500"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1b5e3f] focus:border-[#1b5e3f] text-gray-900 placeholder-gray-500"
                   placeholder="Brief description of the issue"
                 />
               </div>
@@ -130,7 +130,7 @@ export default function ReportIssue() {
                   onChange={handleInputChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E55A2B] focus:border-[#E55A2B] text-gray-900 placeholder-gray-500 resize-none"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1b5e3f] focus:border-[#1b5e3f] text-gray-900 placeholder-gray-500 resize-none"
                   placeholder="Please describe the issue in detail, including what you were trying to do and what happened instead"
                 />
               </div>
@@ -145,7 +145,7 @@ export default function ReportIssue() {
                   name="pageUrl"
                   value={formData.pageUrl}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E55A2B] focus:border-[#E55A2B] text-gray-900 placeholder-gray-500"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1b5e3f] focus:border-[#1b5e3f] text-gray-900 placeholder-gray-500"
                   placeholder="https://launchthatsong.com/..."
                 />
                 <p className="text-sm text-gray-500 mt-1">
@@ -164,7 +164,7 @@ export default function ReportIssue() {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E55A2B] focus:border-[#E55A2B] text-gray-900 placeholder-gray-500"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1b5e3f] focus:border-[#1b5e3f] text-gray-900 placeholder-gray-500"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -180,7 +180,7 @@ export default function ReportIssue() {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E55A2B] focus:border-[#E55A2B] text-gray-900 placeholder-gray-500"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1b5e3f] focus:border-[#1b5e3f] text-gray-900 placeholder-gray-500"
                   placeholder="Enter your email address"
                 />
                 <p className="text-sm text-gray-500 mt-1">

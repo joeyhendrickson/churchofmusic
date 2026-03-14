@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
@@ -7,10 +9,10 @@ export default function AboutPage() {
             About the Church
           </h1>
           <p className="text-lg text-[#4a5568] leading-relaxed mb-6">
-            The United States Church of Music is a collection of home churches across the USA. We put on religious services with the belief that God works through the power of music. Worship leaders and spiritual leaders from established churches introduce artists, and church members attend home groups to workshop alongside artists in worship ceremonies that are 90% music and 10% talk.
+            The United States Church of Music is a collection of home churches across the USA. We host worship ceremonies where God moves through the power of music—awakening hearts, transforming lives, and drawing us into His presence. Worship leaders and spiritual leaders from established churches introduce artists, whom we acknowledge as spiritual leaders in our community. Church members attend home groups to workshop alongside them in ceremonies that are 90% music and 10% talk. Come expectant.
           </p>
           <p className="text-lg text-[#4a5568] leading-relaxed">
-            We host local and touring artists and are partnered with Folk Alliance International. Our mission is spiritual revival through home groups that happen across the country.
+            We host local and touring artists and are partnered with Folk Alliance International. Our mission is spiritual revival through home groups across the country—and we believe the Holy Spirit empowers artists as spiritual leaders to lead us into encounter with God.
           </p>
         </div>
       </section>
@@ -27,7 +29,7 @@ export default function AboutPage() {
             </li>
             <li className="flex gap-3">
               <span className="text-[#1b5e3f] font-bold" aria-hidden>•</span>
-              <span>Regular worship through the expression and presentation of music and inspired word from spiritual leaders.</span>
+              <span>Regular worship through the expression and presentation of music and inspired word from spiritual leaders—including artists as spiritual leaders in our community.</span>
             </li>
             <li className="flex gap-3">
               <span className="text-[#1b5e3f] font-bold" aria-hidden>•</span>
@@ -35,7 +37,7 @@ export default function AboutPage() {
             </li>
             <li className="flex gap-3">
               <span className="text-[#1b5e3f] font-bold" aria-hidden>•</span>
-              <span>Direct support of artists through membership donations (tithes) that sustain our home groups.</span>
+              <span>Direct support of artists as spiritual leaders through membership donations (tithes) that sustain our home groups.</span>
             </li>
           </ul>
         </div>
@@ -47,10 +49,13 @@ export default function AboutPage() {
             Artists as Leaders
           </h2>
           <p className="text-lg text-[#4a5568] leading-relaxed mb-6">
-            We recognize artists as developing and developed spiritual leaders in our community. We invite artists to present their spiritual journeys during our home groups and encourage the acknowledgement of their giftings. We celebrate the music that has led many artists of multiple faiths and beliefs to present publicly, supporting the creative economy and the wellness, emotional intelligence, and spiritual transformation of audiences.
+            We acknowledge artists as developing and developed spiritual leaders in our community. The Holy Spirit has gifted them to lead worship through music, present their spiritual journeys in our home groups, and create space for healing, awakening, and encounter with God. We celebrate the music that has led many artists of multiple faiths and beliefs to step into this calling—supporting the creative economy and the wellness, emotional intelligence, and spiritual transformation of audiences. Come meet them and experience the Spirit moving.
           </p>
-          <p className="text-lg text-[#4a5568] leading-relaxed">
+          <p className="text-lg text-[#4a5568] leading-relaxed mb-6">
             We encourage our members&apos; deeper journeys into music and nearby places of worship through Christian and spiritual ministries they feel called to explore.
+          </p>
+          <p className="text-lg text-[#4a5568]">
+            Explore our <Link href="/biblical-perspectives" className="text-[#1b5e3f] font-semibold hover:underline">Biblical Perspectives</Link>—a blog-style section where we reflect on scripture and how the Holy Spirit works through all genres of music to draw people closer to God.
           </p>
         </div>
       </section>

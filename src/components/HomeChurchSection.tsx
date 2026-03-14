@@ -1,26 +1,27 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 
 const features = [
   {
     title: 'Host a Home Group',
-    description: 'Register your home church as a home group on this site. Present music to church members and lead worship ceremonies that are 90% music and 10% pecha kucha–style reflection on how God works through music.',
+    description: 'Make your home a gathering place for the body of Christ. Regular union and communion in home groups strengthens the church—and draws more people into worship. Register your home church, present music, and lead ceremonies that are 90% music and 10% reflection.',
     href: '/next-steps#home-groups',
   },
   {
-    title: 'Workshop With Artists',
-    description: 'Church members attend home groups and workshop alongside artists. Worship leaders and spiritual leaders from established churches introduce artists, who we recognize as spiritual leaders in our community.',
+    title: 'Gather in Union & Communion',
+    description: 'Home groups are where we break bread, share our tables, and unite as one body. Come weekly. Bring your own drink and food. Workshop alongside artists as spiritual leaders. The more we gather, the more we grow—and the more others are drawn in.',
     href: '/experience/home-group',
   },
   {
     title: 'Worship Through Music',
-    description: 'Bring your own drink and participate in worship ceremonies centered on music. We believe God works through the power of music to inspire faith, empower righteousness, and bring people closer to the presence of God.',
+    description: 'God moves through the power of music—inspiring faith, empowering righteousness, and drawing us into His presence. Attend regularly. Your presence matters. Each gathering builds the body and invites others to join.',
     href: '/beliefs',
   },
   {
-    title: 'Support Artists',
-    description: 'Membership donations (tithes) sustain our home groups and support artists directly. We believe in the direct support of artists who lead worship in our community.',
+    title: 'Support Artists as Spiritual Leaders',
+    description: 'Membership donations (tithes) sustain our home groups and support artists directly—whom we acknowledge as spiritual leaders. Your giving fuels their ministry and keeps our doors open for more worship.',
     href: '/give',
   },
 ]
@@ -34,11 +35,23 @@ export default function HomeChurchSection() {
     >
       <div className="container mx-auto max-w-4xl">
         <h2 id="home-church-heading" className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-4 text-center">
-          Host a Church of Music Home Group
+          Union, Communion & Worship at Home Groups
         </h2>
         <p className="text-lg text-[#4a5568] text-center max-w-2xl mx-auto mb-12">
-          Home churches across the USA put on religious services with the belief that God works through music. Join us.
+          The body of Christ gathers in homes—acoustic artists leading worship, people in union and communion. Come often. Bring others. Regular attendance builds community and draws more into worship. Join us.
         </p>
+
+        {/* Home Group Visual */}
+        <div className="relative rounded-xl overflow-hidden mb-16 aspect-[16/9] max-w-4xl mx-auto border-2 border-[#e2e8f0]">
+          <Image
+            src="/images/home-groups/home-group-worship-living-room.jpg"
+            alt="Acoustic artist performing in a living room while people gather in worship at a Church of Music home group"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 896px"
+            priority
+          />
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {features.map((feature) => (
             <Link
