@@ -248,7 +248,7 @@ export default function LoginPage() {
               onClick={() => router.push('/')}
               className="text-gray-600 hover:text-gray-900 transition-colors text-sm"
             >
-              ← Back to Launch That Song
+              ← Back to Church of Music
             </button>
           </div>
         </div>
@@ -260,8 +260,8 @@ export default function LoginPage() {
     <div className="min-h-screen bg-white flex items-center justify-center p-4">
       <div className="bg-white border border-gray-200 p-8 rounded-2xl max-w-md w-full shadow-lg">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Launch That Song</h1>
-          <p className="text-gray-600">Artist Sign Up and Login</p>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">The United States Church of Music</h1>
+          <p className="text-gray-600">Sign in to your account</p>
         </div>
 
         <form onSubmit={handleLogin} className="space-y-6">
@@ -345,7 +345,7 @@ export default function LoginPage() {
               onClick={() => router.push('/')}
               className="text-gray-600 hover:text-gray-900 transition-colors text-sm"
             >
-              ← Back to Homepage
+              ← Back to Church of Music
             </button>
           </div>
         </div>

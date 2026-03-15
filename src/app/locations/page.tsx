@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import LocationsMapWrapper from '@/components/LocationsMapWrapper'
 
 const locations = [
   { id: 'westerville', name: 'Westerville' },
@@ -16,9 +17,16 @@ export default function LocationsPage() {
           <h1 id="locations-heading" className="text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-8">
             Locations
           </h1>
-          <p className="text-lg text-[#4a5568] leading-relaxed mb-12">
+          <p className="text-lg text-[#4a5568] leading-relaxed mb-8">
             The Church of Music has home groups across the Columbus area. Union and communion happen when we gather regularly. Join us at a location near you—acoustic artists leading worship in homes, people in fellowship. Attend often. Your presence builds the body and draws others into worship.
           </p>
+
+          <div className="mb-12" aria-label="Map of Church of Music locations in Columbus">
+            <LocationsMapWrapper />
+            <p className="text-sm text-[#4a5568] mt-2 text-center">
+              Click a star to become a member
+            </p>
+          </div>
 
           <ul className="space-y-6" role="list">
             {locations.map((loc) => (

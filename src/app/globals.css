@@ -68,4 +68,25 @@ body {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Improve touch targets on mobile (min 44x44px) */
+@media (max-width: 768px) {
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  /* Allow inline links to remain inline */
+  p a, span a, li a {
+    min-height: auto;
+    min-width: auto;
+    display: inline;
+  }
 }

@@ -148,6 +148,22 @@ export default function Navbar() {
           </div>
 
           <nav className="space-y-1" aria-label="Primary">
+            <div className="border-b border-[#e2e8f0] pb-4 mb-4 space-y-1">
+              <Link
+                href="/beliefs"
+                onClick={() => setIsOpen(false)}
+                className="block py-3 text-[#1a1a1a] font-semibold hover:text-[#1b5e3f] focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#1b5e3f] rounded"
+              >
+                Our Beliefs
+              </Link>
+              <Link
+                href="/login"
+                onClick={() => setIsOpen(false)}
+                className="block py-3 text-[#1a1a1a] font-semibold hover:text-[#1b5e3f] focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#1b5e3f] rounded"
+              >
+                Login
+              </Link>
+            </div>
             {navItems.map((item) => (
               <div key={item.label} className="border-b border-[#e2e8f0] last:border-0">
                 <Link
@@ -174,15 +190,6 @@ export default function Navbar() {
                 )}
               </div>
             ))}
-            <div className="pt-4">
-              <Link
-                href="/beliefs"
-                onClick={() => setIsOpen(false)}
-                className="block py-3 text-[#1a1a1a] font-semibold hover:text-[#1b5e3f] focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#1b5e3f] rounded"
-              >
-                Our Beliefs
-              </Link>
-            </div>
           </nav>
         </div>
       </div>

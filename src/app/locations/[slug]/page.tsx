@@ -1,37 +1,17 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { locations, buildGoogleCalendarUrl } from '@/lib/locationData'
 
-const locations: Record<string, { name: string; description: string; neighborhood?: string; note?: string }> = {
-  westerville: {
-    name: 'Westerville',
-    description: 'Home groups and worship ceremonies in Westerville. Join us for 90% music, 10% pecha kucha–style reflection—bring your own drink, workshop alongside artists as spiritual leaders, and experience the power of music as worship. Come expectant for what the Spirit will do.',
-    neighborhood: 'Northeast Columbus',
-    note: 'Contact us for specific meeting times, addresses, and upcoming home group events.',
-  },
-  'grove-city': {
-    name: 'Grove City',
-    description: 'Home groups and worship ceremonies in Grove City. Worship leaders and spiritual leaders introduce artists—whom we acknowledge as spiritual leaders—and church members participate in worship that centers the power of music. Expect transformation.',
-    neighborhood: 'Southwest Columbus',
-    note: 'Contact us for specific meeting times, addresses, and upcoming home group events.',
-  },
-  'downtown-columbus': {
-    name: 'Downtown Columbus',
-    description: 'Home groups and worship ceremonies in Downtown Columbus. We host local and touring artists as spiritual leaders—partnered with Folk Alliance International—in worship ceremonies that are 90% music and 10% talk. God moves through the power of music.',
-    neighborhood: 'Downtown Columbus',
-    note: 'Contact us for specific meeting times, addresses, and upcoming home group events.',
-  },
-  dublin: {
-    name: 'Dublin',
-    description: 'Home groups and worship ceremonies in Dublin. Experience spiritual revival through music. Artists present their spiritual journeys as developing and developed spiritual leaders in our community—come expectant for encounter and transformation.',
-    neighborhood: 'Northwest Columbus',
-    note: 'Contact us for specific meeting times, addresses, and upcoming home group events.',
-  },
-  'new-albany': {
-    name: 'New Albany',
-    description: 'Home groups and worship ceremonies in New Albany. We believe in mentorship, safety, acceptance, and the power of the Spirit to bring healing and breakthrough. Bring your own beverage and food to share as passover, unifying with the body of the church. Artists lead as spiritual leaders in our community.',
-    neighborhood: 'Northeast Columbus',
-    note: 'Contact us for specific meeting times, addresses, and upcoming home group events.',
-  },
+function formatEventDate(dateStr: string) {
+  const d = new Date(dateStr + 'T12:00:00')
+  return d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })
+}
+
+function formatTime(time: string) {
+  const [h, m] = time.split(':').map(Number)
+  const period = h >= 12 ? 'PM' : 'AM'
+  const hour = h % 12 || 12
+  return `${hour}:${m.toString().padStart(2, '0')} ${period}`
 }
 
 export default async function LocationPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -58,15 +38,66 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
           <p className="text-lg text-[#4a5568] leading-relaxed mb-6">
             {location.description}
           </p>
-          <p className="text-[#4a5568] text-sm mb-8">
+          <p className="text-[#4a5568] text-sm mb-10">
             {location.note}
           </p>
+
+          {/* Upcoming Home Groups */}
+          {location.exampleEvents.length > 0 && (
+            <section className="mb-12" aria-labelledby="upcoming-heading">
+              <h2 id="upcoming-heading" className="text-2xl font-bold text-[#1a1a1a] mb-6">
+                Upcoming Home Groups
+              </h2>
+              <ul className="space-y-6" role="list">
+                {location.exampleEvents.map((ev) => {
+                  const calendarUrl = buildGoogleCalendarUrl(ev, location.name)
+                  return (
+                    <li
+                      key={ev.id}
+                      className="bg-[#ffffff] rounded-xl p-6 border-2 border-[#e2e8f0]"
+                    >
+                      <h3 className="text-xl font-bold text-[#1a1a1a] mb-2">{ev.title}</h3>
+                      <p className="text-[#4a5568] font-medium mb-1">
+                        {formatEventDate(ev.date)} · {formatTime(ev.startTime)}–{formatTime(ev.endTime)}
+                      </p>
+                      <p className="text-[#4a5568] text-sm mb-2">{ev.artistName}</p>
+                      <p className="text-[#4a5568] text-sm mb-1">{ev.format}</p>
+                      <p className="text-[#4a5568] text-sm mb-4">{ev.addressHint}</p>
+                      <div className="flex flex-wrap gap-3">
+                        <a
+                          href={calendarUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block bg-[#1b5e3f] text-white font-semibold py-2.5 px-5 rounded-lg hover:bg-[#144d32] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1b5e3f] focus-visible:ring-offset-2 text-sm"
+                        >
+                          Add to Calendar
+                        </a>
+                        <Link
+                          href="/report-issue"
+                          className="inline-block bg-[#ffffff] text-[#1a1a1a] border-2 border-[#1b5e3f] font-semibold py-2.5 px-5 rounded-lg hover:bg-[#f7f7f5] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1b5e3f] focus-visible:ring-offset-2 text-sm"
+                        >
+                          RSVP / Get Address
+                        </Link>
+                      </div>
+                    </li>
+                  )
+                })}
+              </ul>
+            </section>
+          )}
+
           <div className="flex flex-wrap gap-4">
             <Link
               href="/report-issue"
               className="inline-block bg-[#1b5e3f] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#144d32] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1b5e3f] focus-visible:ring-offset-2"
             >
               Contact Us
+            </Link>
+            <Link
+              href="/give#member"
+              className="inline-block bg-[#ffffff] text-[#1a1a1a] border-2 border-[#1b5e3f] font-semibold py-3 px-6 rounded-lg hover:bg-[#f7f7f5] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1b5e3f] focus-visible:ring-offset-2"
+            >
+              Become a Church Member
             </Link>
             <Link
               href="/next-steps#home-groups"
