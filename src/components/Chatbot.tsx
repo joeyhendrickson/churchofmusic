@@ -3,6 +3,9 @@
 import { useState, useRef, useEffect } from 'react'
 import { useChatbot } from '@/context/ChatbotContext'
 
+// Set to true to show the floating AI chat icon again
+const SHOW_CHAT_ICON = false
+
 const Chatbot = () => {
   const { isChatbotOpen, setIsChatbotOpen, chatbotMode, setChatbotMode } = useChatbot()
 
@@ -54,9 +57,14 @@ const Chatbot = () => {
     }
   }
 
+  // When icon is hidden and chat is closed, render nothing (logic stays for programmatic open)
+  if (!SHOW_CHAT_ICON && !isChatbotOpen) {
+    return null
+  }
+
   return (
     <div className={`fixed z-50 ${isChatbotOpen ? 'bottom-4 left-1/2 transform -translate-x-1/2' : 'bottom-4 left-4'}`}>
-      {!isChatbotOpen && (
+      {SHOW_CHAT_ICON && !isChatbotOpen && (
         <button
           onClick={() => setIsChatbotOpen(true)}
           className="bg-[#E55A2B] hover:bg-[#D14A1B] text-white rounded-full p-4 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"

@@ -576,9 +576,10 @@ export default function ArtistPage() {
 
       {/* Right Arrow - Next Artist or Home */}
       {id === '51da1dd7-a6b9-4304-a6e9-ee2ebad3f787' ? (
-        // Special case for Joey Hendrickson's page - link to Columbus Songwriters Association
-        <Link 
-          href="/artist/a5590c42-c83f-4ce5-b64e-5ae4c1db1d6c"
+        // Special case for Joey Hendrickson's page - navigate to next artist (client-side to avoid JSON response on full page load)
+        <button
+          type="button"
+          onClick={() => navigateToArtist('a5590c42-c83f-4ce5-b64e-5ae4c1db1d6c')}
           className="fixed right-4 top-1/2 transform -translate-y-1/2 z-50 inline-flex items-center justify-center w-12 h-12 bg-white backdrop-blur-md border border-gray-300 rounded-full text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-all duration-300 group shadow-lg"
         >
           <svg
@@ -593,7 +594,7 @@ export default function ArtistPage() {
               clipRule="evenodd"
             />
           </svg>
-        </Link>
+        </button>
       ) : nextArtist ? (
         <button 
           onClick={() => navigateToArtist(nextArtist.id)}
