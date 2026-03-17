@@ -1191,7 +1191,7 @@ export default function ArtistDashboard() {
                   value={perspectivePrompt}
                   onChange={(e) => setPerspectivePrompt(e.target.value)}
                   rows={6}
-                  placeholder="Example: I grew up in a household where gospel and blues intertwined. There was a season when I fell into deep depression, and a certain folk song—not explicitly Christian—became the first crack of light. It spoke of loss and hope in a way that opened my heart to pray again. I believe God uses all kinds of music to draw people closer..."
+                  placeholder="Example: I grew up in a household where gospel and blues intertwined. There was a season when I fell into deep depression, and a certain folk song—not explicitly God—became the first crack of light. It spoke of loss and hope in a way that opened my heart to pray again. I believe God uses all kinds of music to draw people closer..."
                   className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1b5e3f] focus:border-[#1b5e3f] text-gray-900 placeholder-gray-500"
                 />
                 <button

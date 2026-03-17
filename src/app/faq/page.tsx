@@ -6,7 +6,7 @@ export default function FAQPage() {
     },
     {
       q: 'What happens at a home group?',
-      a: 'Home groups are where we experience union and communion in the body of Christ. Worship ceremonies are 90% music and 10% talk. Acoustic artists lead from living rooms and home stages. Church members attend, bring their own beverage and food (passover style, unifying with the body), and workshop alongside artists as spiritual leaders. The format is 45 minutes worship, 10 minutes sermon, 40 minutes worship—typically 7–9 PM. Come often. Regular attendance builds community and draws others in.',
+      a: 'Home groups are where we experience union and communion in the body of God. Worship ceremonies are 90% music and 10% talk. Acoustic artists lead from living rooms and home stages. Church members attend, bring their own beverage and food (passover style, unifying with the body), and workshop alongside artists as spiritual leaders. The format is 45 minutes worship, 10 minutes sermon, 40 minutes worship—typically 7–9 PM. Come often. Regular attendance builds community and draws others in.',
     },
     {
       q: 'How do I host a home group?',
@@ -55,7 +55,7 @@ export default function FAQPage() {
           </div>
 
           <p className="mt-12 text-[#4a5568]">
-            Have another question? <a href="/report-issue" className="text-[#1b5e3f] font-semibold hover:underline">Contact us</a>.
+            Have another question? <a href="/contact" className="text-[#1b5e3f] font-semibold hover:underline">Contact us</a>.
           </p>
         </div>
       </section>

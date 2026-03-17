@@ -23,7 +23,7 @@ const footerLinks = {
   support: [
     { label: 'Give', href: '/give' },
     { label: 'Request Prayer', href: '/request-prayer' },
-    { label: 'Contact', href: '/report-issue' },
+    { label: 'Contact', href: '/contact' },
   ],
 }
 

@@ -7,7 +7,7 @@ export default function HomeGroupPage() {
       <div className="container mx-auto max-w-3xl">
         <h1 className="text-4xl font-bold text-[#1a1a1a] mb-4">Home Group Workshop</h1>
         <p className="text-lg text-[#4a5568] leading-relaxed mb-8">
-          Union and communion in the body of Christ happens when we gather regularly. Home groups are the heart of the Church of Music—where acoustic artists lead worship in living rooms and home stages, and people come together for fellowship, shared table, and worship. Attend often. Your presence builds the church and invites others in.
+          Union and communion in the body of God happens when we gather regularly. Home groups are the heart of the Church of Music—where acoustic artists lead worship in living rooms and home stages, and people come together for fellowship, shared table, and worship. Attend often. Your presence builds the church and invites others in.
         </p>
 
         <div className="relative rounded-xl overflow-hidden mb-12 aspect-video border-2 border-[#e2e8f0]">

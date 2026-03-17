@@ -16,7 +16,7 @@ export default function Home() {
             First time here?
           </h2>
           <p className="text-[#4a5568] max-w-2xl mx-auto mb-6">
-            Come expectant. God is moving through the power of music—awakening hearts, transforming lives, and drawing us into His presence. Find a home group near you and come regularly. Union and communion in the body of Christ grows when we gather often. The Spirit is at work.
+            Come expectant. God is moving through the power of music—awakening hearts, transforming lives, and drawing us into His presence. Find a home group near you and come regularly. Union and communion in the body of God grows when we gather often. The Spirit is at work.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
@@ -45,7 +45,8 @@ export default function Home() {
       <section className="bg-[#1b5e3f] text-[#ffffff] py-16 md:py-24 px-4" aria-labelledby="hero-heading">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-            The United States Church of Music
+            The United States<br />
+            Church of Music
           </h1>
           <p className="text-xl md:text-2xl opacity-95 max-w-2xl mx-auto mb-8">
             Spiritual revival through home churches across the country. God is moving through music—and we believe the Holy Spirit empowers artists as spiritual leaders in our community to lead us into encounter with Him.
@@ -77,6 +78,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Biblical Perspectives – eye-catching promo */}
+      <section className="py-14 px-4 bg-gradient-to-br from-[#2d5016] via-[#1b5e3f] to-[#0d3318] text-white relative overflow-hidden" aria-labelledby="perspectives-promo-heading">
+        <div className="absolute inset-0 opacity-10" aria-hidden="true">
+          <div className="absolute top-0 left-0 w-64 h-64 border-2 border-white rounded-full -translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 border-2 border-white rounded-full translate-x-1/3 translate-y-1/3" />
+        </div>
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
+          <p className="text-[#b8e0a8] font-semibold text-sm uppercase tracking-wider mb-2">
+            Scripture &amp; Music
+          </p>
+          <h2 id="perspectives-promo-heading" className="text-3xl md:text-4xl font-bold mb-4">
+            Biblical Perspectives
+          </h2>
+          <p className="text-lg opacity-95 max-w-2xl mx-auto mb-8">
+            How does the Holy Spirit move through music—in every genre and culture? Explore scripture, from David’s lyre to Miriam’s tambourine, and reflections from our artists as spiritual leaders.
+          </p>
+          <Link
+            href="/biblical-perspectives"
+            className="inline-block bg-white text-[#1b5e3f] font-bold py-4 px-8 rounded-xl hover:bg-[#f7f7f5] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#1b5e3f]"
+          >
+            Explore Biblical Perspectives →
+          </Link>
+        </div>
+      </section>
+
       {/* Approved Home Groups (from DB) */}
       <ApprovedHomeGroups />
 
@@ -87,7 +113,7 @@ export default function Home() {
             Union & Communion at Home Groups
           </h2>
           <p className="text-lg opacity-95 max-w-2xl mx-auto">
-            The body of Christ gathers in homes for worship. Come often. Regular attendance deepens community and draws others in. Host or attend—both build the church.
+            The body of God gathers in homes for worship. Come often. Regular attendance deepens community and draws others in. Host or attend—both build the church.
           </p>
           <Link
             href="/next-steps#home-groups"
@@ -121,7 +147,7 @@ export default function Home() {
             <div className="bg-[#ffffff] rounded-xl p-8 border border-[#e2e8f0]">
               <h3 className="text-xl font-bold text-[#1a1a1a] mb-4">Home Groups: Union & Communion</h3>
               <p className="text-[#4a5568] leading-relaxed">
-                The body of Christ gathers in homes for regular union and communion. Worship leaders and spiritual leaders introduce artists as spiritual leaders. Church members attend often—bringing their own drink, sharing the table—and participate in worship that is 90% music and 10% reflection. Come consistently. Your presence strengthens the body and invites others in.
+                The body of God gathers in homes for regular union and communion. Worship leaders and spiritual leaders introduce artists as spiritual leaders. Church members attend often—bringing their own drink, sharing the table—and participate in worship that is 90% music and 10% reflection. Come consistently. Your presence strengthens the body and invites others in.
               </p>
             </div>
             <div className="bg-[#ffffff] rounded-xl p-8 border border-[#e2e8f0]">
@@ -172,7 +198,7 @@ export default function Home() {
               FAQ
             </Link>
             <Link
-              href="/report-issue"
+              href="/contact"
               className="inline-block text-[#1b5e3f] font-semibold underline underline-offset-4 hover:text-[#144d32] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1b5e3f] focus-visible:ring-offset-2 rounded"
             >
               Get In Touch

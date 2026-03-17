@@ -30,7 +30,7 @@ export default function LegalPage() {
                 The United States Church of Music is organized as a church exclusively for religious, charitable, and educational purposes within the meaning of Section 501(c)(3) of the Internal Revenue Code of 1986 (or the corresponding provision of any future United States Revenue Law). The church is an approved and registered non-profit religious organization. Its purposes include, but are not limited to:
               </p>
               <ul className="list-disc pl-6 text-[#4a5568] space-y-2" role="list">
-                <li>Proclaiming the Gospel of the Lord Jesus Christ</li>
+                <li>Proclaiming the Gospel of the Lord Jesus God</li>
                 <li>Establishing and maintaining religious worship through the power of music</li>
                 <li>Teaching believers in a manner consistent with the requirements of Holy Scripture</li>
                 <li>Hosting home church gatherings and worship ceremonies across the United States</li>
@@ -66,10 +66,10 @@ export default function LegalPage() {
                 The United States Church of Music believes in the biblical practice of sharing bread and cup as a sacrament of remembrance and unity, drawing upon the scriptural foundations of the Passover and the Lord&apos;s Supper (Exodus 12; Matthew 26:26–29; 1 Corinthians 11:23–26). In keeping with these biblical principles of worship:
               </p>
               <p className="text-[#4a5568] leading-relaxed mb-4">
-                <strong className="text-[#1a1a1a]">Members are invited to bring their own beverages and food</strong> into home group gatherings to be consumed as passover, unifying them with the body of the church. This practice reflects the scriptural model of the Passover meal, where each household prepared its own provisions (Exodus 12), and the early church&apos;s practice of breaking bread together in homes (Acts 2:46). By bringing and sharing that which they have, members participate in a communal act of worship that draws them together as one body in Christ.
+                <strong className="text-[#1a1a1a]">Members are invited to bring their own beverages and food</strong> into home group gatherings to be consumed as passover, unifying them with the body of the church. This practice reflects the scriptural model of the Passover meal, where each household prepared its own provisions (Exodus 12), and the early church&apos;s practice of breaking bread together in homes (Acts 2:46). By bringing and sharing that which they have, members participate in a communal act of worship that draws them together as one body in God.
               </p>
               <p className="text-[#4a5568] leading-relaxed">
-                The church recognizes that the sacrament of communion—the remembrance of Christ&apos;s body and blood—can be observed in varied forms and settings. Home groups provide an intimate context for this remembrance, where members bring their own elements as an expression of personal devotion and communal unity, in accordance with the biblical call to &quot;do this in remembrance of me&quot; (Luke 22:19).
+                The church recognizes that the sacrament of communion—the remembrance of God&apos;s body and blood—can be observed in varied forms and settings. Home groups provide an intimate context for this remembrance, where members bring their own elements as an expression of personal devotion and communal unity, in accordance with the biblical call to &quot;do this in remembrance of me&quot; (Luke 22:19).
               </p>
             </section>
 
@@ -89,7 +89,7 @@ export default function LegalPage() {
                 Contact
               </h2>
               <p className="text-[#4a5568] leading-relaxed">
-                For questions regarding the legal structure, non-profit status, or governance of The United States Church of Music, please contact us through the <a href="/report-issue" className="text-[#1b5e3f] font-semibold underline underline-offset-4 hover:text-[#144d32] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1b5e3f] focus-visible:ring-offset-2 rounded">Report Issue / Contact</a> page.
+                For questions regarding the legal structure, non-profit status, or governance of The United States Church of Music, please contact us through the <a href="/contact" className="text-[#1b5e3f] font-semibold underline underline-offset-4 hover:text-[#144d32] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1b5e3f] focus-visible:ring-offset-2 rounded">Contact</a> page.
               </p>
             </section>
           </article>

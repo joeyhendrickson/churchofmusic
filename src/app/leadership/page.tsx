@@ -52,7 +52,7 @@ export default function LeadershipPage() {
           </section>
 
           <p className="mt-12 text-[#4a5568]">
-            To connect with leadership, <a href="/report-issue" className="text-[#1b5e3f] font-semibold hover:underline">contact us</a>.
+            To connect with leadership, <a href="/contact" className="text-[#1b5e3f] font-semibold hover:underline">contact us</a>.
           </p>
         </div>
       </section>

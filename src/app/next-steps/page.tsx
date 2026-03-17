@@ -7,7 +7,7 @@ export default function NextStepsPage() {
     { id: 'connect', title: 'Connect', desc: 'Connect with worship leaders, artists as spiritual leaders, and other church members. Build community through music and worship.' },
     { id: 'serve', title: 'Serve', desc: 'Serve the church by volunteering at home groups, supporting artists as spiritual leaders, or helping with worship ceremonies.' },
     { id: 'give', title: 'Give', desc: 'Support the church through tithes and donations. Membership donations sustain our home groups and support artists as spiritual leaders in their calling.' },
-    { id: 'home-groups', title: 'Home Groups', desc: 'Union and communion in the body of Christ happens at home groups. Attend regularly—your presence builds community and draws others in. Host or join: acoustic artists lead worship in homes; people gather for fellowship and worship. Come often.' },
+    { id: 'home-groups', title: 'Home Groups', desc: 'Union and communion in the body of God happens at home groups. Attend regularly—your presence builds community and draws others in. Host or join: acoustic artists lead worship in homes; people gather for fellowship and worship. Come often.' },
   ]
 
   return (
@@ -41,17 +41,17 @@ export default function NextStepsPage() {
           <div className="mt-12 p-8 bg-[#1b5e3f] text-[#ffffff] rounded-xl">
             <h2 className="text-2xl font-bold mb-4">Union, Communion & Regular Attendance</h2>
             <p className="mb-6 opacity-95">
-              The body of Christ gathers in homes for worship. Register your home church as a home group—or attend one near you. Regular union and communion builds the church and draws more people into worship. Come often. Contact us to get started.
+              The body of God gathers in homes for worship. Register your home church as a home group—or attend one near you. Regular union and communion builds the church and draws more people into worship. Come often. Contact us to get started.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/home-church-signup"
                 className="inline-block bg-[#ffffff] text-[#1b5e3f] font-semibold py-3 px-6 rounded-lg hover:bg-[#f7f7f5] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffffff] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1b5e3f]"
               >
-                Register as Home Church Leader
+                Become a Home Church
               </Link>
               <Link
-                href="/report-issue"
+                href="/contact"
                 className="inline-block border-2 border-[#ffffff] text-[#ffffff] font-semibold py-3 px-6 rounded-lg hover:bg-[#ffffff] hover:text-[#1b5e3f] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffffff] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1b5e3f]"
               >
                 Contact Us

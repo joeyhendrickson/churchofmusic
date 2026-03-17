@@ -73,7 +73,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                           Add to Calendar
                         </a>
                         <Link
-                          href="/report-issue"
+                          href="/contact"
                           className="inline-block bg-[#ffffff] text-[#1a1a1a] border-2 border-[#1b5e3f] font-semibold py-2.5 px-5 rounded-lg hover:bg-[#f7f7f5] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1b5e3f] focus-visible:ring-offset-2 text-sm"
                         >
                           RSVP / Get Address
@@ -88,7 +88,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/report-issue"
+              href="/contact"
               className="inline-block bg-[#1b5e3f] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#144d32] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1b5e3f] focus-visible:ring-offset-2"
             >
               Contact Us

@@ -42,7 +42,7 @@ export default function ExperiencePage() {
                 </Link>
               </h2>
               <p className="text-[#4a5568]">
-                Attend a home group in person. Union and communion in the body of Christ happens when we gather regularly. Bring your own drink, workshop alongside artists as spiritual leaders, and participate in worship that is 90% music and 10% talk. Come often—your presence builds community and invites others in. Church members can register to host home groups.
+                Attend a home group in person. Union and communion in the body of God happens when we gather regularly. Bring your own drink, workshop alongside artists as spiritual leaders, and participate in worship that is 90% music and 10% talk. Come often—your presence builds community and invites others in. Church members can register to host home groups.
               </p>
             </article>
           </div>

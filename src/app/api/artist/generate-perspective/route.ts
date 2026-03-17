@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
 
 Write a full, well-structured article (600-1200 words) based on the artist's prompt. The article should:
 - Be personal and reflective, drawing from the artist's experiences and stories
-- Reflect on how God works through music—all genres, not just "Christian" music
+- Reflect on how God works through music—all genres, not just "God" music
 - Include moments of healing, encounter, transformation, or connection
 - Be warm, charismatic, and accessible
 - Have a clear title, a 2-3 sentence excerpt, and a full body with logical paragraphs

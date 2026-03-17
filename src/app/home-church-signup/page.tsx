@@ -171,7 +171,7 @@ export default function HomeChurchSignupPage() {
             disabled={loading}
             className="w-full bg-[#1b5e3f] text-white font-semibold py-3 rounded-lg hover:bg-[#144d32] disabled:opacity-50 transition-colors"
           >
-            {loading ? 'Submitting...' : 'Register as Home Church Leader'}
+            {loading ? 'Submitting...' : 'Become a Home Church'}
           </button>
         </form>
 

@@ -52,7 +52,7 @@ export default function AboutPage() {
             We acknowledge artists as developing and developed spiritual leaders in our community. The Holy Spirit has gifted them to lead worship through music, present their spiritual journeys in our home groups, and create space for healing, awakening, and encounter with God. We celebrate the music that has led many artists of multiple faiths and beliefs to step into this calling—supporting the creative economy and the wellness, emotional intelligence, and spiritual transformation of audiences. Come meet them and experience the Spirit moving.
           </p>
           <p className="text-lg text-[#4a5568] leading-relaxed mb-6">
-            We encourage our members&apos; deeper journeys into music and nearby places of worship through Christian and spiritual ministries they feel called to explore.
+            We encourage our members&apos; deeper journeys into music and nearby places of worship through God and spiritual ministries they feel called to explore.
           </p>
           <p className="text-lg text-[#4a5568]">
             Explore our <Link href="/biblical-perspectives" className="text-[#1b5e3f] font-semibold hover:underline">Biblical Perspectives</Link>—a blog-style section where we reflect on scripture and how the Holy Spirit works through all genres of music to draw people closer to God.

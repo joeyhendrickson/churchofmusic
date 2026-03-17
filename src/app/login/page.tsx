@@ -327,7 +327,7 @@ export default function LoginPage() {
                 href="/home-church-signup"
                 className="w-full bg-[#1b5e3f] hover:bg-[#144d32] text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 inline-block text-center"
               >
-                Register as Home Church Leader
+                Become a Home Church
               </Link>
             </div>
           </div>

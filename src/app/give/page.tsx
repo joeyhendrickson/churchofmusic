@@ -53,10 +53,10 @@ export default function GivePage() {
     </a>
   ) : (
     <Link
-      href="/report-issue"
+      href="/donate"
       className="inline-block bg-[#1b5e3f] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#144d32] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1b5e3f] focus-visible:ring-offset-2"
     >
-      Contact Us for Online Giving
+      Give Online
     </Link>
   )
   return (
@@ -131,7 +131,7 @@ export default function GivePage() {
               <div className="bg-[#ffffff] rounded-xl p-6 border border-[#e2e8f0]">
                 <h3 className="text-lg font-bold text-[#1a1a1a] mb-2">Stock, Crypto & Other Assets</h3>
                 <p className="text-[#4a5568] mb-4">
-                  Interested in giving stock, cryptocurrency, or other non-cash assets? We accept these contributions. <Link href="/report-issue" className="text-[#1b5e3f] font-semibold hover:underline">Contact us</Link> and we&apos;ll provide instructions for your preferred method.
+                  Interested in giving stock, cryptocurrency, or other non-cash assets? We accept these contributions. <Link href="/contact" className="text-[#1b5e3f] font-semibold hover:underline">Contact us</Link> and we&apos;ll provide instructions for your preferred method.
                 </p>
               </div>
             </div>
@@ -152,7 +152,7 @@ export default function GivePage() {
           </section>
 
           <p className="mt-12 text-[#4a5568]">
-            Questions about giving? <Link href="/report-issue" className="text-[#1b5e3f] font-semibold hover:underline">Contact us</Link>.
+            Questions about giving? <Link href="/contact" className="text-[#1b5e3f] font-semibold hover:underline">Contact us</Link>.
           </p>
         </div>
       </section>

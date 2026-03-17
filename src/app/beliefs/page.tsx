@@ -32,7 +32,7 @@ export default function BeliefsPage() {
               We believe God moves through a community of believers. Drawing from the insights of Tocqueville and our understanding of American civic life, we believe that even communities of people who are believers in music—as a form of nature and creation—can serve as a conduit through which God reinspires faith and wellness. Secular music has unified people in ways God works through for healing and transformation, leading them toward greater connection with the Holy Spirit—through the early semblance of what church looks and feels like: community gatherings centered on shared encounter.
             </p>
             <p className="text-[#4a5568] leading-relaxed">
-              We encourage our members&apos; deeper journeys into music and also nearby places of worship through Christian and spiritual ministries they feel called to investigate. We believe in mentorship within our community, safety, and acceptance of all people with diverse backgrounds and faiths.
+              We encourage our members&apos; deeper journeys into music and also nearby places of worship through God and spiritual ministries they feel called to investigate. We believe in mentorship within our community, safety, and acceptance of all people with diverse backgrounds and faiths.
             </p>
           </section>
 
@@ -54,6 +54,12 @@ export default function BeliefsPage() {
             <p className="text-[#4a5568] mb-6">
               <Link href="/biblical-perspectives" className="text-[#1b5e3f] font-semibold hover:underline">Biblical Perspectives</Link> is a blog-style section where we reflect on how God is multi-genre, moving through all types of music and all types of people. We share thoughts on scripture, community, and the many ways music serves as a conduit for transformation, awakening, and encounter with the Spirit.
             </p>
+            <Link
+              href="/biblical-perspectives"
+              className="inline-block bg-[#1b5e3f] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#144d32] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1b5e3f] focus-visible:ring-offset-2 mb-10"
+            >
+              Biblical Perspectives
+            </Link>
 
             <div className="space-y-8">
               <article className="bg-[#ffffff] rounded-xl p-8 border border-[#e2e8f0]">
