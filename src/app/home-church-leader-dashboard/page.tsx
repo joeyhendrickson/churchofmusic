@@ -30,7 +30,7 @@ interface HomeGroupEvent {
   artists: { name: string } | null
 }
 
-const STANDARD_FORMAT = '45 min worship, 10 min sermon, 40 min worship'
+const STANDARD_FORMAT = '45 min worship, 10 min message, 40 min worship'
 
 export default function HomeChurchLeaderDashboard() {
   const router = useRouter()
@@ -162,7 +162,7 @@ export default function HomeChurchLeaderDashboard() {
   return (
     <div className="min-h-screen bg-[#f7f7f5] p-6">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold text-[#1a1a1a] mb-2">Home Church Leader Dashboard</h1>
+        <h1 className="text-3xl font-bold text-[#1a1a1a] mb-2">Home Group Location Dashboard</h1>
         <p className="text-[#4a5568] mb-8">
           {hcl?.name}, {hcl?.neighborhood}, {hcl?.city}
         </p>

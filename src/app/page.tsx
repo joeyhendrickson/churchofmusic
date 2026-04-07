@@ -16,7 +16,7 @@ export default function Home() {
             First time here?
           </h2>
           <p className="text-[#4a5568] max-w-2xl mx-auto mb-6">
-            Come expectant. God is moving through the power of music—awakening hearts, transforming lives, and drawing us into His presence. Find a home group near you and come regularly. Union and communion in the body of God grows when we gather often. The Spirit is at work.
+            Come expectant. God is moving through the power of music—awakening hearts, transforming lives, and drawing us into His presence. Find a home group near you and come regularly. Union and communion in the body of God grows when we gather often. God is at work.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
@@ -49,7 +49,7 @@ export default function Home() {
             Church of Music
           </h1>
           <p className="text-xl md:text-2xl opacity-95 max-w-2xl mx-auto mb-8">
-            Spiritual revival through home churches across the country. God is moving through music—and we believe the Holy Spirit empowers artists as spiritual leaders in our community to lead us into encounter with Him.
+            An interfaith organization. Spiritual revival through home churches across the country. God is moving through music—and we believe God empowers artists as spiritual leaders in our community to lead us into encounter with Him.
           </p>
           <Link
             href="/next-steps#home-groups"
@@ -67,7 +67,7 @@ export default function Home() {
             Watch
           </h2>
           <p className="text-[#4a5568] max-w-2xl mx-auto mb-6">
-            Join our worship ceremonies online. Church Online brings the same 90% music, 10% talk format to your screen—spiritual leaders and artists—whom we acknowledge as spiritual leaders—leading worship through the power of music. Come expectant for what the Spirit will do.
+            Join our worship ceremonies online. Church Online brings the same 90% music, 10% message format to your screen—spiritual leaders and artists—whom we acknowledge as spiritual leaders—leading worship through the power of music. Come expectant for what God will do.
           </p>
           <Link
             href="/experience/online"
@@ -92,7 +92,7 @@ export default function Home() {
             Biblical Perspectives
           </h2>
           <p className="text-lg opacity-95 max-w-2xl mx-auto mb-8">
-            How does the Holy Spirit move through music—in every genre and culture? Explore scripture, from David’s lyre to Miriam’s tambourine, and reflections from our artists as spiritual leaders.
+            How does God move through music—in every genre and culture? Explore scripture, from David’s lyre to Miriam’s tambourine, and messages from our artists as spiritual leaders.
           </p>
           <Link
             href="/biblical-perspectives"
@@ -147,13 +147,13 @@ export default function Home() {
             <div className="bg-[#ffffff] rounded-xl p-8 border border-[#e2e8f0]">
               <h3 className="text-xl font-bold text-[#1a1a1a] mb-4">Home Groups: Union & Communion</h3>
               <p className="text-[#4a5568] leading-relaxed">
-                The body of God gathers in homes for regular union and communion. Worship leaders and spiritual leaders introduce artists as spiritual leaders. Church members attend often—bringing their own drink, sharing the table—and participate in worship that is 90% music and 10% reflection. Come consistently. Your presence strengthens the body and invites others in.
+                The body of God gathers in homes for regular union and communion. Worship leaders and spiritual leaders introduce artists as spiritual leaders. Church members attend often—bringing their own drink, sharing the table—and participate in worship that is 90% music and 10% message. Come consistently. Your presence strengthens the body and invites others in.
               </p>
             </div>
             <div className="bg-[#ffffff] rounded-xl p-8 border border-[#e2e8f0]">
               <h3 className="text-xl font-bold text-[#1a1a1a] mb-4">Local & Touring Artists as Spiritual Leaders</h3>
               <p className="text-[#4a5568] leading-relaxed">
-                We host local and touring artists in our worship ceremonies—partnered with Folk Alliance International. We acknowledge artists as spiritual leaders in our community: they present their spiritual journeys, lead worship through music, and the Holy Spirit moves through their giftings to bring healing, awakening, and encounter with God. Come meet them.
+                We host local and touring artists in our worship ceremonies—partnered with Folk Alliance International. We acknowledge artists as spiritual leaders in our community: they present their spiritual journeys, lead worship through music, and God moves through their giftings to bring healing, awakening, and encounter with God. Come meet them.
               </p>
             </div>
           </div>
@@ -214,7 +214,7 @@ export default function Home() {
             Our Beliefs
           </h2>
           <p className="text-[#4a5568] text-lg text-center max-w-2xl mx-auto mb-8">
-            The Holy Spirit moves through music—inspiring faith, empowering righteousness, and drawing us into the presence of God. We believe in miracles through music, in artists as spiritual leaders, and in revival. Our beliefs are rooted in Biblical scripture.
+            God moves through music—inspiring faith, empowering righteousness, and drawing us into the presence of God. We believe in miracles through music, in artists as spiritual leaders, and in revival. Our beliefs are rooted in Biblical scripture.
           </p>
           <div className="text-center">
             <Link

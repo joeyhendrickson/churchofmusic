@@ -8,7 +8,7 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 
 export const metadata = {
   title: 'Biblical Perspectives | Church of Music',
-  description: 'Reflections on scripture, music, and how the Holy Spirit works through all genres to draw people closer to God.',
+  description: 'Reflections on scripture, music, and how God works through all genres to draw people closer to God.',
 }
 
 export default async function BiblicalPerspectivesPage() {
@@ -32,7 +32,7 @@ export default async function BiblicalPerspectivesPage() {
             Biblical Perspectives
           </h1>
           <p className="text-lg text-[#4a5568] leading-relaxed mb-12">
-            We reflect on scripture and the ways the Holy Spirit moves through music—all genres, all cultures—to captivate, connect, unify, and draw people closer to God. Each post begins with biblical text and explores how God works through human experience, nature, and music to bring healing, community, and meaning. Artist perspectives share personal stories from our spiritual leaders.
+            We reflect on scripture and the ways God moves through music—all genres, all cultures—to captivate, connect, unify, and draw people closer to God. Each post begins with biblical text and explores how God works through human experience, nature, and music to bring healing, community, and meaning. Artist perspectives share personal stories from our spiritual leaders.
           </p>
 
           {artistPerspectives.length > 0 && (

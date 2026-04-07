@@ -2,19 +2,19 @@ export default function FAQPage() {
   const faqs = [
     {
       q: 'What does the Church of Music believe?',
-      a: 'We believe God moves through the power of music—awakening hearts, inspiring faith, and empowering righteousness. Our tenets include: regular worship through music and inspired word from spiritual leaders and artists as spiritual leaders; mentorship, safety, and acceptance of all people; and direct support of artists through membership donations (tithes) that sustain our home groups. We cite Biblical scripture about the Holy Spirit working through music. Come expectant for what the Spirit will do.',
+      a: 'We believe God moves through the power of music—awakening hearts, inspiring faith, and empowering righteousness. Our tenets include: regular worship through music and inspired word from spiritual leaders and artists as spiritual leaders; mentorship, safety, and acceptance of all people; and direct support of artists through membership donations (tithes) that sustain our home groups. We cite Biblical scripture about God working through music. Come expectant for what God will do.',
     },
     {
       q: 'What happens at a home group?',
-      a: 'Home groups are where we experience union and communion in the body of God. Worship ceremonies are 90% music and 10% talk. Acoustic artists lead from living rooms and home stages. Church members attend, bring their own beverage and food (passover style, unifying with the body), and workshop alongside artists as spiritual leaders. The format is 45 minutes worship, 10 minutes sermon, 40 minutes worship—typically 7–9 PM. Come often. Regular attendance builds community and draws others in.',
+      a: 'Home groups are where we experience union and communion in the body of God. Worship ceremonies are 90% music and 10% message. Acoustic artists lead from living rooms and home stages. Church members attend, bring their own beverage and food (passover style, unifying with the body), and workshop alongside artists as spiritual leaders. The format is 45 minutes worship, 10 minutes message, 40 minutes worship—typically 7–9 PM. Come often. Regular attendance builds community and draws others in.',
     },
     {
       q: 'How do I host a home group?',
-      a: 'Register as a Home Church Leader on this site. Provide your address, neighborhood, and city. Admin will review and approve your request. Once approved, you can request to host specific artists on dates and times through your dashboard. Admin approves those event requests, and approved home groups are displayed on our homepage.',
+      a: 'Register as a Home Group Location on this site. Provide your address, neighborhood, and city. Admin will review and approve your request. Once approved, you can request to host specific artists on dates and times through your dashboard. Admin approves those event requests, and approved home groups are displayed on our homepage.',
     },
     {
       q: 'Who are the artists?',
-      a: 'We acknowledge artists as developing and developed spiritual leaders in our community. The Holy Spirit has gifted them to lead worship through music, present their spiritual journeys during our home groups, and create space for healing, awakening, and encounter with God. We host local and touring artists and are partnered with Folk Alliance International. Explore our Artists as Spiritual Leaders section to stream music, leave feedback, and support their ministry.',
+      a: 'We acknowledge artists as developing and developed spiritual leaders in our community. God has gifted them to lead worship through music, present their spiritual journeys during our home groups, and create space for healing, awakening, and encounter with God. We host local and touring artists and are partnered with Folk Alliance International. Explore our Artists as Spiritual Leaders section to stream music, leave feedback, and support their ministry.',
     },
     {
       q: 'Why do members bring their own drink and food?',
@@ -30,7 +30,7 @@ export default function FAQPage() {
     },
     {
       q: 'What if I need prayer or spiritual support?',
-      a: 'We invite you to submit a Request Prayer form. Someone from our community will reach out to pray with you and offer spiritual support. We believe in mentorship, safety, acceptance of all people, and the power of the Spirit to bring healing and breakthrough. You are not alone.',
+      a: 'We invite you to submit a Request Prayer form. Someone from our community will reach out to pray with you and offer spiritual support. We believe in mentorship, safety, acceptance of all people, and the power of God to bring healing and breakthrough. You are not alone.',
     },
   ]
 

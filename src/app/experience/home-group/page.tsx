@@ -22,7 +22,7 @@ export default function HomeGroupPage() {
         </div>
 
         <p className="text-lg text-[#4a5568] leading-relaxed mb-6">
-          Church members bring their own drink and food—passover style, unifying with the body. Workshop alongside artists as spiritual leaders in ceremonies that are 90% music and 10% pecha kucha–style reflection on how God moves through music. Worship leaders from established churches introduce artists. We host local and touring artists and are partnered with Folk Alliance International.
+          Church members bring their own drink and food—passover style, unifying with the body. Workshop alongside artists as spiritual leaders in ceremonies that are 90% music and 10% pecha kucha–style message on how God moves through music. Worship leaders from established churches introduce artists. We host local and touring artists and are partnered with Folk Alliance International.
         </p>
         <p className="text-lg text-[#4a5568] leading-relaxed mb-8">
           Come consistently. Regular attendance deepens community, strengthens the body, and draws more people into worship. The more we gather, the more we grow.

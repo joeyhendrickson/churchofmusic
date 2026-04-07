@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, message: error.message }, { status: 500 })
     }
 
-    return NextResponse.json({ success: true, message: `Home church leader ${action}` })
+    return NextResponse.json({ success: true, message: `Home group location ${action}` })
   } catch (error) {
     console.error('Approve home church error:', error)
     return NextResponse.json({ success: false, message: 'An unexpected error occurred' }, { status: 500 })

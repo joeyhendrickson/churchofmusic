@@ -107,12 +107,12 @@ export default function LoginPage() {
         if (!hclError && homeChurchLeader) {
           setUserType('admin') // reuse for routing
           if (homeChurchLeader.status === 'pending') {
-            setError('Your Home Church Leader request is pending admin approval. You will be notified once approved.')
+            setError('Your Home Group Location request is pending admin approval. You will be notified once approved.')
             setLoading(false)
             return
           }
           if (homeChurchLeader.status === 'rejected') {
-            setError('Your Home Church Leader request was not approved. Contact support for more information.')
+            setError('Your Home Group Location request was not approved. Contact support for more information.')
             setLoading(false)
             return
           }
@@ -130,7 +130,7 @@ export default function LoginPage() {
         console.log('Artist check result:', { artist, artistError })
 
         if (artistError || !artist) {
-          setError('No artist, home church leader, or admin account found with this email')
+          setError('No artist, home group location, or admin account found with this email')
         } else {
           setUserType('artist')
           

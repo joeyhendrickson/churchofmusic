@@ -6,7 +6,7 @@ import Image from 'next/image'
 const features = [
   {
     title: 'Host a Home Group',
-    description: 'Make your home a gathering place for the body of God. Regular union and communion in home groups strengthens the church—and draws more people into worship. Register your home church, present music, and lead ceremonies that are 90% music and 10% reflection.',
+    description: 'Make your home a gathering place for the body of God. Regular union and communion in home groups strengthens the church—and draws more people into worship. Register your home church, present music, and lead ceremonies that are 90% music and 10% message.',
     href: '/next-steps#home-groups',
   },
   {

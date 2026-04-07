@@ -1,4 +1,4 @@
--- Home Church Leaders and Home Group Events Schema
+-- Home group locations (home_church_leaders) and Home Group Events Schema
 -- Run this in Supabase SQL Editor
 -- Adds: home_church_leaders table, home_group_events table, RLS policies
 
@@ -30,8 +30,8 @@ CREATE TABLE IF NOT EXISTS home_group_events (
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now())
 );
 
--- Standard format: 45 min worship, 10 min sermon, 40 min worship (stored as constant description)
-COMMENT ON TABLE home_group_events IS 'Home group event requests. When approved, displayed on front page. Standard format: 45 min worship, 10 min sermon, 40 min worship.';
+-- Standard format: 45 min worship, 10 min message, 40 min worship (stored as constant description)
+COMMENT ON TABLE home_group_events IS 'Home group event requests. When approved, displayed on front page. Standard format: 45 min worship, 10 min message, 40 min worship.';
 
 -- 3. Indexes
 CREATE INDEX IF NOT EXISTS idx_home_church_leaders_email ON home_church_leaders(email);

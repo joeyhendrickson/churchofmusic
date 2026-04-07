@@ -7,7 +7,7 @@ export default function MomentumPage() {
       <div className="container mx-auto max-w-3xl">
         <h1 className="text-4xl font-bold text-[#1a1a1a] mb-8">Current Series: Momentum</h1>
         <p className="text-lg text-[#4a5568] leading-relaxed mb-8">
-          Our current worship series explores how God moves through music to create momentum in faith, community, and spiritual revival. Join us at a home group or online to experience worship that is 90% music and 10% pecha kucha–style reflection—with spiritual leaders and artists as spiritual leaders leading us into encounter with God. Come expectant for what the Spirit will do.
+          Our current worship series explores how God moves through music to create momentum in faith, community, and spiritual revival. Join us at a home group or online to experience worship that is 90% music and 10% pecha kucha–style message—with spiritual leaders and artists as spiritual leaders leading us into encounter with God. Come expectant for what God will do.
         </p>
 
         <div className="grid grid-cols-2 gap-4 mb-10">

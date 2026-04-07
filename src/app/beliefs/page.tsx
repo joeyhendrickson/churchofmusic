@@ -9,7 +9,7 @@ export default function BeliefsPage() {
             Our Beliefs
           </h1>
           <p className="text-lg text-[#4a5568] leading-relaxed mb-12">
-            The United States Church of Music is grounded in the belief that God moves through the power of music. Our beliefs reference specific Biblical scriptures about how the Holy Spirit works through music—inspiring faith, empowering righteousness, and drawing us into His presence. We cite examples from the Bible about music as worship and connection with God. We acknowledge artists as spiritual leaders in our community, gifted by the Spirit to lead us into encounter.
+            The United States Church of Music is an interfaith organization grounded in the belief that God moves through the power of music. Our beliefs reference specific Biblical scriptures about how God works through music—inspiring faith, empowering righteousness, and drawing us into His presence. We cite examples from the Bible about music as worship and connection with God. We acknowledge artists as spiritual leaders in our community, gifted by God to lead us into encounter.
           </p>
 
           <section className="mb-16" aria-labelledby="scripture-heading">
@@ -17,7 +17,7 @@ export default function BeliefsPage() {
               Scripture and Music
             </h2>
             <p className="text-[#4a5568] leading-relaxed mb-4">
-              Throughout the Bible, music appears as a vehicle for worship and connection with God. We believe the Holy Spirit moves through music—inspiring faith, empowering righteousness, awakening hearts, and drawing people into the presence of God. Our worship ceremonies reflect this conviction: 90% music, 10% talk, with spiritual leaders and artists as spiritual leaders offering pecha kucha–style reflections on how God works through the modality of music. Come expectant for transformation.
+              Throughout the Bible, music appears as a vehicle for worship and connection with God. We believe God moves through music—inspiring faith, empowering righteousness, awakening hearts, and drawing people into the presence of God. Our worship ceremonies reflect this conviction: 90% music, 10% message, with spiritual leaders and artists as spiritual leaders offering pecha kucha–style messages on how God works through the modality of music. Come expectant for transformation.
             </p>
             <p className="text-[#4a5568] leading-relaxed">
               We do not believe God is limited to the specific modalities of miracles that the Bible presents. Miracles can happen through music as a conduit for transformation that leads people closer to the presence of God. We believe in the regular worship of God through the expression and presentation of music and inspired word from spiritual leaders who feel called to speak to how God works through music.
@@ -29,7 +29,7 @@ export default function BeliefsPage() {
               Community and Belief
             </h2>
             <p className="text-[#4a5568] leading-relaxed mb-4">
-              We believe God moves through a community of believers. Drawing from the insights of Tocqueville and our understanding of American civic life, we believe that even communities of people who are believers in music—as a form of nature and creation—can serve as a conduit through which God reinspires faith and wellness. Secular music has unified people in ways God works through for healing and transformation, leading them toward greater connection with the Holy Spirit—through the early semblance of what church looks and feels like: community gatherings centered on shared encounter.
+              We believe God moves through a community of believers. Drawing from the insights of Tocqueville and our understanding of American civic life, we believe that even communities of people who are believers in music—as a form of nature and creation—can serve as a conduit through which God reinspires faith and wellness. Secular music has unified people in ways God works through for healing and transformation, leading them toward greater connection with God—through the early semblance of what church looks and feels like: community gatherings centered on shared encounter.
             </p>
             <p className="text-[#4a5568] leading-relaxed">
               We encourage our members&apos; deeper journeys into music and also nearby places of worship through God and spiritual ministries they feel called to investigate. We believe in mentorship within our community, safety, and acceptance of all people with diverse backgrounds and faiths.
@@ -41,7 +41,7 @@ export default function BeliefsPage() {
               Artists and Spiritual Leadership
             </h2>
             <p className="text-[#4a5568] leading-relaxed">
-              We celebrate the giftings of music that have led many artists—of multiple faiths and beliefs—to present music publicly in our city&apos;s spaces and places. We acknowledge artists as developing and developed spiritual leaders in our community. The Holy Spirit moves through their music to bring wellness, emotional intelligence, healing, awakening, and spiritual transformation—as audiences encounter God through songs that have blessed, healed, or supported their understanding and growth. We invite artists to present their spiritual journeys during our home groups and believe in the direct support of artists as spiritual leaders through membership donations (tithes) that sustain our home groups. Come expectant for what the Spirit will do.
+              We celebrate the giftings of music that have led many artists—of multiple faiths and beliefs—to present music publicly in our city&apos;s spaces and places. We acknowledge artists as developing and developed spiritual leaders in our community. God moves through their music to bring wellness, emotional intelligence, healing, awakening, and spiritual transformation—as audiences encounter God through songs that have blessed, healed, or supported their understanding and growth. We invite artists to present their spiritual journeys during our home groups and believe in the direct support of artists as spiritual leaders through membership donations (tithes) that sustain our home groups. Come expectant for what God will do.
             </p>
           </section>
 
@@ -52,7 +52,7 @@ export default function BeliefsPage() {
               Perspectives
             </h2>
             <p className="text-[#4a5568] mb-6">
-              <Link href="/biblical-perspectives" className="text-[#1b5e3f] font-semibold hover:underline">Biblical Perspectives</Link> is a blog-style section where we reflect on how God is multi-genre, moving through all types of music and all types of people. We share thoughts on scripture, community, and the many ways music serves as a conduit for transformation, awakening, and encounter with the Spirit.
+              <Link href="/biblical-perspectives" className="text-[#1b5e3f] font-semibold hover:underline">Biblical Perspectives</Link> is a blog-style section where we reflect on how God is multi-genre, moving through all types of music and all types of people. We share thoughts on scripture, community, and the many ways music serves as a conduit for transformation, awakening, and encounter with God.
             </p>
             <Link
               href="/biblical-perspectives"
@@ -65,7 +65,7 @@ export default function BeliefsPage() {
               <article className="bg-[#ffffff] rounded-xl p-8 border border-[#e2e8f0]">
                 <h3 className="text-xl font-bold text-[#1a1a1a] mb-4">God Is Multi-Genre</h3>
                 <p className="text-[#4a5568] leading-relaxed mb-4">
-                  We believe God moves through all types of music and all types of people. Folk, gospel, rock, classical, jazz, hip-hop—no genre is outside the possibility of the Holy Spirit&apos;s movement. Music transcends the categories we create for it and serves as a conduit for transformation, awakening, and encounter with God regardless of its label.
+                  We believe God moves through all types of music and all types of people. Folk, gospel, rock, classical, jazz, hip-hop—no genre is outside the possibility of God&apos;s movement. Music transcends the categories we create for it and serves as a conduit for transformation, awakening, and encounter with God regardless of its label.
                 </p>
                 <p className="text-[#4a5568] text-sm">More perspectives coming soon.</p>
               </article>

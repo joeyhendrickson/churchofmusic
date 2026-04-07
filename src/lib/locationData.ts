@@ -43,7 +43,7 @@ export const locations: Record<string, LocationData> = {
     name: 'Westerville',
     neighborhood: 'Northeast Columbus',
     description:
-      'Home groups and worship ceremonies in Westerville. Join us for 90% music, 10% pecha kucha–style reflection—bring your own drink, workshop alongside artists as spiritual leaders, and experience the power of music as worship. Come expectant for what the Spirit will do.',
+      'Home groups and worship ceremonies in Westerville. Join us for 90% music, 10% pecha kucha–style message—bring your own drink, workshop alongside artists as spiritual leaders, and experience the power of music as worship. Come expectant for what God will do.',
     note: 'Contact us for full addresses and to RSVP for home groups.',
     exampleEvents: [
       {
@@ -53,7 +53,7 @@ export const locations: Record<string, LocationData> = {
         startTime: '19:00',
         endTime: '21:00',
         artistName: 'Acoustic trio',
-        format: '45 min worship, 10 min sermon, 40 min worship',
+        format: '45 min worship, 10 min message, 40 min worship',
         addressHint: 'Westerville home (address provided after RSVP)',
       },
       {
@@ -63,7 +63,7 @@ export const locations: Record<string, LocationData> = {
         startTime: '19:00',
         endTime: '21:00',
         artistName: 'Piano & acoustic',
-        format: '45 min worship, 10 min sermon, 40 min worship',
+        format: '45 min worship, 10 min message, 40 min worship',
         addressHint: 'Westerville home (address provided after RSVP)',
       },
     ],
@@ -82,7 +82,7 @@ export const locations: Record<string, LocationData> = {
         startTime: '18:00',
         endTime: '20:00',
         artistName: 'Folk duo',
-        format: '45 min worship, 10 min sermon, 40 min worship',
+        format: '45 min worship, 10 min message, 40 min worship',
         addressHint: 'Grove City home (address provided after RSVP)',
       },
       {
@@ -92,7 +92,7 @@ export const locations: Record<string, LocationData> = {
         startTime: '18:00',
         endTime: '20:00',
         artistName: 'Acoustic trio',
-        format: '45 min worship, 10 min sermon, 40 min worship',
+        format: '45 min worship, 10 min message, 40 min worship',
         addressHint: 'Grove City home (address provided after RSVP)',
       },
     ],
@@ -101,7 +101,7 @@ export const locations: Record<string, LocationData> = {
     name: 'Downtown Columbus',
     neighborhood: 'Downtown Columbus',
     description:
-      'Home groups and worship ceremonies in Downtown Columbus. We host local and touring artists as spiritual leaders—partnered with Folk Alliance International—in worship ceremonies that are 90% music and 10% talk. God moves through the power of music.',
+      'Home groups and worship ceremonies in Downtown Columbus. We host local and touring artists as spiritual leaders—partnered with Folk Alliance International—in worship ceremonies that are 90% music and 10% message. God moves through the power of music.',
     note: 'Contact us for full addresses and to RSVP for home groups.',
     exampleEvents: [
       {
@@ -111,7 +111,7 @@ export const locations: Record<string, LocationData> = {
         startTime: '19:00',
         endTime: '21:00',
         artistName: 'Piano & vocals',
-        format: '45 min worship, 10 min sermon, 40 min worship',
+        format: '45 min worship, 10 min message, 40 min worship',
         addressHint: 'Downtown Columbus (address provided after RSVP)',
       },
       {
@@ -121,7 +121,7 @@ export const locations: Record<string, LocationData> = {
         startTime: '19:00',
         endTime: '21:00',
         artistName: 'Touring artist',
-        format: '45 min worship, 10 min sermon, 40 min worship',
+        format: '45 min worship, 10 min message, 40 min worship',
         addressHint: 'Downtown Columbus (address provided after RSVP)',
       },
     ],
@@ -140,7 +140,7 @@ export const locations: Record<string, LocationData> = {
         startTime: '19:00',
         endTime: '21:00',
         artistName: 'Acoustic & piano',
-        format: '45 min worship, 10 min sermon, 40 min worship',
+        format: '45 min worship, 10 min message, 40 min worship',
         addressHint: 'Dublin home (address provided after RSVP)',
       },
       {
@@ -150,7 +150,7 @@ export const locations: Record<string, LocationData> = {
         startTime: '19:00',
         endTime: '21:00',
         artistName: 'Singer-songwriter',
-        format: '45 min worship, 10 min sermon, 40 min worship',
+        format: '45 min worship, 10 min message, 40 min worship',
         addressHint: 'Dublin home (address provided after RSVP)',
       },
     ],
@@ -159,7 +159,7 @@ export const locations: Record<string, LocationData> = {
     name: 'New Albany',
     neighborhood: 'Northeast Columbus',
     description:
-      'Home groups and worship ceremonies in New Albany. We believe in mentorship, safety, acceptance, and the power of the Spirit to bring healing and breakthrough. Bring your own beverage and food to share as passover, unifying with the body of the church. Artists lead as spiritual leaders in our community.',
+      'Home groups and worship ceremonies in New Albany. We believe in mentorship, safety, acceptance, and the power of God to bring healing and breakthrough. Bring your own beverage and food to share as passover, unifying with the body of the church. Artists lead as spiritual leaders in our community.',
     note: 'Contact us for full addresses and to RSVP for home groups.',
     exampleEvents: [
       {
@@ -169,7 +169,7 @@ export const locations: Record<string, LocationData> = {
         startTime: '18:30',
         endTime: '20:30',
         artistName: 'Piano trio',
-        format: '45 min worship, 10 min sermon, 40 min worship',
+        format: '45 min worship, 10 min message, 40 min worship',
         addressHint: 'New Albany home (address provided after RSVP)',
       },
       {
@@ -179,7 +179,7 @@ export const locations: Record<string, LocationData> = {
         startTime: '18:30',
         endTime: '20:30',
         artistName: 'Acoustic ensemble',
-        format: '45 min worship, 10 min sermon, 40 min worship',
+        format: '45 min worship, 10 min message, 40 min worship',
         addressHint: 'New Albany home (address provided after RSVP)',
       },
     ],

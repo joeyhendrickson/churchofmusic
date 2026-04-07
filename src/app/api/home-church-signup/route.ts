@@ -57,7 +57,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      message: 'Home Church Leader account created. Please check your email to confirm. Once confirmed, you can log in. Your request to be approved as a home group is pending admin review.',
+      message: 'Home Group Location account created. Please check your email to confirm. Once confirmed, you can log in. Your request to be approved as a home group is pending admin review.',
     })
   } catch (error) {
     console.error('Home church signup error:', error)

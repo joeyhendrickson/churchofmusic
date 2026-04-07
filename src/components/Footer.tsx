@@ -97,7 +97,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div>
               <p className="text-[#e2e8f0] text-sm">
-                The United States Church of Music — spiritual revival through home churches. God works through the power of music.
+                The United States Church of Music is an interfaith organization—spiritual revival through home churches. God works through the power of music.
               </p>
             </div>
             <form onSubmit={handleEmailSubmit} className="flex gap-2 max-w-sm">

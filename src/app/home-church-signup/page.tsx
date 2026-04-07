@@ -62,7 +62,7 @@ export default function HomeChurchSignupPage() {
         <div className="max-w-md mx-auto text-center">
           <h1 className="text-2xl font-bold text-[#1a1a1a] mb-4">Check Your Email</h1>
           <p className="text-[#4a5568] mb-6">
-            Your Home Church Leader account has been created. Please confirm your email, then log in. Your request to be approved as a home group is pending admin review.
+            Your Home Group Location account has been created. Please confirm your email, then log in. Your request to be approved as a home group is pending admin review.
           </p>
           <Link
             href="/login"
@@ -78,7 +78,7 @@ export default function HomeChurchSignupPage() {
   return (
     <div className="min-h-screen py-16 px-4 bg-[#f7f7f5]">
       <div className="max-w-md mx-auto">
-        <h1 className="text-3xl font-bold text-[#1a1a1a] mb-2">Become a Home Church Leader</h1>
+        <h1 className="text-3xl font-bold text-[#1a1a1a] mb-2">Become a Home Group Location</h1>
         <p className="text-[#4a5568] mb-8">
           Register your home as a Church of Music home group. Provide your address and neighborhood. Admin will review and approve your request.
         </p>

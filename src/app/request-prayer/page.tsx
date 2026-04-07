@@ -32,7 +32,7 @@ export default function RequestPrayerPage() {
         <div className="max-w-md mx-auto text-center">
           <h1 className="text-2xl font-bold text-[#1a1a1a] mb-4">Thank You</h1>
           <p className="text-[#4a5568] mb-6">
-            Your prayer request has been received. Someone from our community will reach out to pray with you and offer spiritual support. We believe God moves through the power of music and through the community of believers—and the Spirit brings healing and breakthrough. You are not alone.
+            Your prayer request has been received. Someone from our community will reach out to pray with you and offer spiritual support. We believe God moves through the power of music and through the community of believers—and God brings healing and breakthrough. You are not alone.
           </p>
           <Link
             href="/"
@@ -50,7 +50,7 @@ export default function RequestPrayerPage() {
       <div className="max-w-md mx-auto">
         <h1 className="text-4xl font-bold text-[#1a1a1a] mb-4">Request Prayer</h1>
         <p className="text-[#4a5568] mb-8">
-          We believe in mentorship, safety, and acceptance—and in the power of the Spirit to bring healing and breakthrough. Need prayer or spiritual support? Fill out the form below and someone from our community will reach out to pray with you. You are not alone.
+          We believe in mentorship, safety, and acceptance—and in the power of God to bring healing and breakthrough. Need prayer or spiritual support? Fill out the form below and someone from our community will reach out to pray with you. You are not alone.
         </p>
 
         <form onSubmit={handleSubmit} className="bg-[#ffffff] rounded-xl p-8 border border-[#e2e8f0] space-y-6">

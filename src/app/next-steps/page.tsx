@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function NextStepsPage() {
   const steps = [
-    { id: 'get-started', title: 'Get Started', desc: 'Begin your journey with the Church of Music. Attend a home group, explore our beliefs, or reach out to connect. Come expectant for what the Spirit will do.' },
+    { id: 'get-started', title: 'Get Started', desc: 'Begin your journey with the Church of Music. Attend a home group, explore our beliefs, or reach out to connect. Come expectant for what God will do.' },
     { id: 'follow', title: 'Follow', desc: 'Follow us on social media and subscribe to our updates to stay connected with worship series, events, and home group schedules.' },
     { id: 'connect', title: 'Connect', desc: 'Connect with worship leaders, artists as spiritual leaders, and other church members. Build community through music and worship.' },
     { id: 'serve', title: 'Serve', desc: 'Serve the church by volunteering at home groups, supporting artists as spiritual leaders, or helping with worship ceremonies.' },

@@ -9,7 +9,7 @@ export default function ExperiencePage() {
             Experience
           </h1>
           <p className="text-lg text-[#4a5568] leading-relaxed mb-12">
-            Join our worship ceremonies online or at a home group. Our experiences are 90% music and 10% pecha kucha–style sermons from spiritual leaders and artists as spiritual leaders who speak to how God moves through music. Come expectant for encounter and transformation.
+            Join our worship ceremonies online or at a home group. Our experiences are 90% music and 10% pecha kucha–style messages from spiritual leaders and artists as spiritual leaders who speak to how God moves through music. Come expectant for encounter and transformation.
           </p>
 
           <div className="space-y-8">
@@ -42,7 +42,7 @@ export default function ExperiencePage() {
                 </Link>
               </h2>
               <p className="text-[#4a5568]">
-                Attend a home group in person. Union and communion in the body of God happens when we gather regularly. Bring your own drink, workshop alongside artists as spiritual leaders, and participate in worship that is 90% music and 10% talk. Come often—your presence builds community and invites others in. Church members can register to host home groups.
+                Attend a home group in person. Union and communion in the body of God happens when we gather regularly. Bring your own drink, workshop alongside artists as spiritual leaders, and participate in worship that is 90% music and 10% message. Come often—your presence builds community and invites others in. Church members can register to host home groups.
               </p>
             </article>
           </div>

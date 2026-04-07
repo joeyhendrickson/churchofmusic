@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "The United States Church of Music",
-  description: "A collection of home churches across the USA where we believe God works through the power of music. Join worship ceremonies, host a Home Group, or discover our beliefs.",
+  description: "An interfaith organization—a collection of home churches across the USA where we believe God works through the power of music. Join worship ceremonies, host a Home Group, or discover our beliefs.",
 };
 
 export default function RootLayout({

@@ -14,7 +14,7 @@ interface HomeGroupEvent {
   home_church_leaders: { neighborhood: string; city: string } | null
 }
 
-const STANDARD_FORMAT = '45 min worship, 10 min sermon, 40 min worship'
+const STANDARD_FORMAT = '45 min worship, 10 min message, 40 min worship'
 
 function formatTime(t: string) {
   if (!t) return ''

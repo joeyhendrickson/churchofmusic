@@ -1396,12 +1396,12 @@ export default function AdminDashboard() {
           <div className="space-y-6">
             <div className="bg-white rounded-lg shadow">
               <div className="px-6 py-4 border-b border-gray-200">
-                <h3 className="text-lg font-medium text-gray-900">Pending Home Church Leader Approvals</h3>
+                <h3 className="text-lg font-medium text-gray-900">Pending Home Group Location Approvals</h3>
                 <p className="text-sm text-gray-500 mt-1">Approve or reject home groups for their neighborhood/city</p>
               </div>
               <div className="p-6">
                 {pendingHomeChurchLeaders.length === 0 ? (
-                  <p className="text-gray-500">No pending home church leader approvals</p>
+                  <p className="text-gray-500">No pending home group location approvals</p>
                 ) : (
                   <div className="space-y-4">
                     {pendingHomeChurchLeaders.map((hcl) => (
@@ -1453,7 +1453,7 @@ export default function AdminDashboard() {
                             <p className="text-sm text-gray-500">Artist: {artistName}</p>
                             <p className="text-sm text-gray-600">{loc}</p>
                             <p className="text-sm text-gray-600">
-                              {new Date(ev.event_date).toLocaleDateString()} • {String(ev.start_time).slice(0, 5)} – {String(ev.end_time).slice(0, 5)} | Format: 45 min worship, 10 min sermon, 40 min worship
+                              {new Date(ev.event_date).toLocaleDateString()} • {String(ev.start_time).slice(0, 5)} – {String(ev.end_time).slice(0, 5)} | Format: 45 min worship, 10 min message, 40 min worship
                             </p>
                           </div>
                           <div className="flex space-x-2">

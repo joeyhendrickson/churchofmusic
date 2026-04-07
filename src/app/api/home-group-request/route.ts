@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
       .single()
 
     if (hclError || !hcl) {
-      return NextResponse.json({ success: false, message: 'Home church leader not found' }, { status: 404 })
+      return NextResponse.json({ success: false, message: 'Home group location not found' }, { status: 404 })
     }
     if (hcl.status !== 'approved') {
       return NextResponse.json({ success: false, message: 'Your home group must be approved before submitting event requests' }, { status: 403 })
